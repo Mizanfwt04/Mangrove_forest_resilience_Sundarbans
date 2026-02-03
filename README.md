@@ -138,6 +138,8 @@ pip install rasterio geopandas statsmodels scikit-learn matplotlib matplotlib-sc
 3. Calculate R² for goodness-of-fit
 4. Estimate recovery rate from parameter b
 
+
+
 ### Resilience Classification
 - Based on baseline kNDVI (year 2000)
 - Accounts for spatial heterogeneity
