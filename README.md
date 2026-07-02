@@ -181,3 +181,21 @@ If you use this code in your research, please cite the associated publication:
 - MODIS data from NASA Earth Observations
 - ETH Canopy Height data
 - Study site coordinates from field surveys
+
+## Conference Submission — GreenEcoSustainExpo-2027
+
+Conference materials for the [Global Conference & Expo on Green Manufacturing, Circular Economy & Sustainable Development](https://greenmanufacturing.theinfiniteminds.net/) (GreenEcoSustainExpo-2027, Tokyo, 22–24 March 2027) are in [`GreenEcoSustainExpo_2027/`](GreenEcoSustainExpo_2027/):
+
+- [`abstract.md`](GreenEcoSustainExpo_2027/abstract.md) — ready-to-submit abstract with keywords and track alignment
+- [`poster_outline.md`](GreenEcoSustainExpo_2027/poster_outline.md) — A0 poster layout and key results
+
+### Compound Climate Stress Analysis
+
+Plot-level analysis linking humid-heat exposure and co-occurring stressors to recurring perturbation dynamics:
+
+```bash
+pip install pandas openpyxl matplotlib scipy
+python3 compound_stress_analysis.py --output-dir compound_stress_output
+```
+
+Outputs include `compound_stress_propagation.png` and `compound_stress_correlations.csv`.
