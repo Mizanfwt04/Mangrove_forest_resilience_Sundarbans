@@ -100,8 +100,6 @@ def build_climate_composites() -> ee.Image:
     pdsi = tc.map(lambda img: _scale_terraclimate_band(img, "pdsi"))
     pr = tc.map(lambda img: _scale_terraclimate_band(img, "pr"))
 
-    # Annual aggregates
-    vpd_annual = vpd.map(lambda img: img.set("year", img.date().get("year"))).median()
     vpd_p95 = vpd.reduce(ee.Reducer.percentile([95])).rename("vpd_p95")
     soil_min = soil.min().rename("soil_min")
     soil_mean = soil.mean().rename("soil_mean")

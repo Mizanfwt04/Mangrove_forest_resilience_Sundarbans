@@ -58,6 +58,18 @@ This project analyzes the resilience of mangrove forests in the Sundarbans to cy
   - **Moderately resilient**: kNDVI 0.39-0.49
   - **Low resilient**: kNDVI < 0.39
 
+## Related Analysis: Temporal Stability of Forest Carbon
+
+For **global tropical moist forests**, see `tropical_forest_stability/` and `tropical_forest_stability_analysis.ipynb`. That pipeline quantifies temporal stability of aboveground carbon as **mean(annual AGB) / SD(annual AGB)** from CTrees (2000–2025), then tests whether functional traits mediate the effect of compound water stress (VPD + soil moisture deficit) on stability.
+
+```bash
+cd tropical_forest_stability
+pip install -r requirements.txt
+python make_demo_data.py && python analysis.py   # test without Google Earth Engine
+```
+
+The Sundarbans mangrove analysis in this notebook uses a complementary approach: kNDVI time-series resilience (λ from AC1 and variance) rather than direct AGB carbon stocks.
+
 ## Code Structure
 
 ### Main Notebook: `Figs_resilience03022026.ipynb`
