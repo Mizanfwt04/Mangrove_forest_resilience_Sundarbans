@@ -70,6 +70,8 @@ python make_demo_data.py && python analysis.py   # test without Google Earth Eng
 
 The Sundarbans mangrove analysis in this notebook uses a complementary approach: kNDVI time-series resilience (λ from AC1 and variance) rather than direct AGB carbon stocks.
 
+For **extreme climate mediation** on the Sundarbans plot-level SEM, see `sundarbans_mediation/` and `sundarbans_extreme_climate_mediation.ipynb`. That extension contrasts mean MAP/MAT (CHELSA) with compound stress indices (VPD p95, heat, drought) and tests whether biotic traits and sediment properties mediate those pathways.
+
 ## Code Structure
 
 ### Main Notebook: `Figs_resilience03022026.ipynb`
