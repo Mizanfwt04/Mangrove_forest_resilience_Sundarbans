@@ -191,22 +191,31 @@ def build():
         notes="~1.5 min. Point to figure placeholder — insert kNDVI map or AC1 map from your notebook.",
     )
 
-    # Slide 6
+    # Slide 6 — Tropical forest carbon stability (CTrees AGB)
     add_content_slide(
         prs,
-        "Tropical Forest Carbon Stability — including Amazon",
+        "Tropical Forest Carbon Stability — CTrees AGB (2000–2025)",
         [
-            "Project: Tropical_forest_carbon_stability (Sundarbans + Amazon)",
-            "Amazon: applied stability/resilience metrics to tropical terra firme forest landscapes",
-            "Same workflow: long-term vegetation time series → perturbation → AC1/λ → stability class",
-            "Compares regions losing recovery capacity despite structurally intact canopy",
-            "Different stressors (cyclones vs drought/fire) — shared mechanism: carbon-climate feedback risk",
-            "My role: extended pipeline to Amazon AOI, processed satellite stacks, spatial interpretation",
-            "[INSERT FIGURE: Amazon stability map + study area inset]",
-            "Direct relevance: eastern Amazon transition zone targeted by CarbonARA (Santarém, Pará)",
+            "Project: Tropical_forest_carbon_stability — Sundarbans + Amazon",
+            "Data: CTrees global aboveground biomass (AGB), 100 m, annual 2000–2025",
+            "   • Deep learning (DenseNet) fused with Landsat, ALOS PALSAR, GEDI/ICESat-2 structure",
+            "   • Direct carbon-relevant metric (Mg ha⁻¹) — not just greenness indices",
+            "Analysis: multi-year AGB time series → trend & inter-annual variability → stability classes",
+            "   • Identify pixels/regions with declining biomass carbon despite persistent tree cover",
+            "   • Compare primary vs disturbed forest stability across biomes",
+            "Amazon: map where AGB carbon stocks are losing stability in eastern Amazon landscapes",
+            "Sundarbans: complementary to field inventory — landscape context for plot-scale sink degradation",
+            "My role: built Python pipeline, extracted CTrees stacks, computed stability metrics, mapped Amazon + Sundarbans",
+            "[INSERT FIGURE: CTrees ΔAGB or stability map — Amazon with Santarém/CarbonARA inset]",
+            "CarbonARA link: validate CTrees/BIOMASS against tower fluxes & campaign biomass estimates",
         ],
-        subtitle="Multi-biome extension of the same reproducible pipeline",
-        notes="~1.5 min. Replace bracketed figure with your actual Amazon map. Be honest: satellite pilot, not Amazon fieldwork yet.",
+        subtitle="Tracking when tropical forests lose carbon storage stability — not just canopy greenness",
+        notes=(
+            "~1.5 min. Emphasise CTrees AGB gives direct biomass carbon time series 2000–2025 at 100 m. "
+            "This is stronger than NDVI-only for CarbonARA Theme II (vegetation carbon storage). "
+            "Mention you apply same stability framework in Amazon and Sundarbans. "
+            "CarbonARA can ground-truth with Tapajós towers, airborne structure, and BIOMASS/FLEX validation."
+        ),
     )
 
     # Slide 7
@@ -215,9 +224,10 @@ def build():
         "Multi-sensor Earth observation & validation experience",
         "Data & methods I use",
         [
+            "Biomass carbon: CTrees AGB 100 m annual time series (2000–2025)",
             "Optical: Landsat 5–8, Sentinel-2, MODIS, PlanetScope, WorldView-2",
             "Radar: Sentinel-1, TanDEM-X; canopy height from GEDI",
-            "Platforms: Google Earth Engine, Python, R, ENVI, SNAP",
+            "Platforms: Google Earth Engine, Python, R, AWS/Open Data (CTrees), ENVI, SNAP",
             "Analytics: ML (XGBoost, RF), SEM (lavaan), time-series decomposition",
             "Proximal: UAV (HK certified), terrestrial LiDAR, hyperspectral",
             "Global product experience: mangrove soil carbon map (Sanderman et al. 2018)",
@@ -229,6 +239,7 @@ def build():
             "Thermal: KT15 LST radiometers",
             "Airborne: BAS Twin Otter — SIF, methane hyperspectral, in-situ GHGs",
             "Satellites: Sentinel-2/3/5P, FLEX, BIOMASS, MicroCarb, MetOp/IASI",
+            "Validation: compare CTrees/BIOMASS AGB with campaign biomass & flux-derived NEE",
             "Fire: mobile roving sensors for smoke & particulates",
         ],
         notes="~1 min. Position yourself as ready to validate satellite products — core RA task.",
@@ -285,7 +296,7 @@ def build():
             "   • FLoX (SIF) + L-band radiometer & GNSS (VOD) + KT15 (LST) at tower sites",
             "   • Continuous CO₂ fluxes at Tapajós KM67 (primary) vs UFOPA (secondary)",
             "   • Airborne SIF/thermal + Sentinel-3 SLSTR for landscape scaling",
-            "Approach: test whether physiological/structural stress signals precede flux reversal — building on my hidden sink degradation & AC1 framework",
+            "Approach: test whether physiological/structural stress signals (SIF, VOD, LST) precede AGB/flux decline — building on CTrees AGB stability analysis & field-based hidden sink degradation",
         ],
         subtitle="Can integrated SIF, VOD, and thermal observations detect sink degradation before flux towers record net carbon loss?",
         notes="~1.5 min. Required slide per interview instructions. Justify why important.",
@@ -303,7 +314,7 @@ def build():
             "   • BAS Twin Otter in-situ GHG sampling + Telops methane hyperspectral",
             "   • Sentinel-5P TROPOMI (CH₄, CO) & MicroCarb (CO₂) for validation",
             "   • Sentinel-2 land-cover stratification within the AOO",
-            "Approach: stratified upscaling model linking my carbon-stability classes to flux observations",
+            "Approach: stratified upscaling linking CTrees AGB stability classes & field carbon plots to tower and airborne flux observations",
         ],
         subtitle="How do primary vs secondary forest differ in landscape-scale CO₂ and CH₄ exchange, and can airborne–tower fusion reduce satellite upscaling errors?",
         notes="~1.5 min. Shows you understand scale mismatch problem central to CarbonARA design.",
@@ -316,7 +327,7 @@ def build():
         [
             "Process & QC harmonised tower, airborne, and satellite datasets for the Santarém domain",
             "Lead analyses linking vegetation structure, SIF/VOD/thermal signals, and carbon flux dynamics",
-            "Extend my tropical carbon-stability framework using CarbonARA's unique co-located measurements",
+            "Extend my CTrees AGB carbon-stability framework using CarbonARA's co-located flux and structure measurements",
             "Support satellite validation (FLEX, BIOMASS, S5P, MicroCarb) and manuscript preparation",
             "Collaborate with INPE, UFOPA, BAS, and NCEO teams; contribute to ESA deliverables",
             "Available from 1 July 2026 | committed to fieldwork in Brazil & researcher development at King's",
