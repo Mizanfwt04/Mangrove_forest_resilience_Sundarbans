@@ -6,9 +6,27 @@
  *   Mean_uGPP, SD_uGPP, Temporal_Stability (= Mean/SD),
  *   Sen_Slope, Kendall_Tau
  *
+ * Study area: paste / import chakaria_boundary.geojson
+ *   Local Windows source: D:\A_letter_to_Science\chakaria_boundary.geojson
+ *   Project copy:         chakaria_mangrove_productivity/data/chakaria_boundary.geojson
+ *
  * Paste into https://code.earthengine.google.com/ and Run.
  * Then start the two Export tasks (site metrics + full time series).
  */
+
+// ======================================================
+// STUDY AREA BOUNDARY
+// ======================================================
+// Option A (recommended): Assets → New → Shape files / GeoJSON upload
+//   then replace the asset id below.
+// Option B: draw / import GeoJSON in the Code Editor and rename to `aoi`.
+
+var aoi = ee.FeatureCollection(
+  // TODO: replace with your uploaded asset, e.g.
+  // 'users/YOUR_USER/chakaria_boundary'
+  // Until then, a provisional convex-hull AOI around the sites is built below.
+  []
+);
 
 // ======================================================
 // GPW ANNUAL uGPP DATASET
@@ -61,7 +79,23 @@ var sites = ee.FeatureCollection([
   ee.Feature(ee.Geometry.Point([92.006717, 21.609433]), {ID: 'N10', Group: 'PMWSP'})
 ]);
 
-Map.centerObject(sites, 11);
+// Provisional AOI if no asset uploaded yet
+aoi = ee.Algorithms.If(
+  aoi.size().gt(0),
+  aoi,
+  ee.FeatureCollection([
+    ee.Feature(sites.geometry().convexHull(100).buffer(2500))
+  ])
+);
+aoi = ee.FeatureCollection(aoi);
+var aoiGeom = aoi.geometry();
+
+ugpp = ugpp.filterBounds(aoiGeom).map(function (img) {
+  return img.clip(aoiGeom);
+});
+
+Map.centerObject(aoi, 11);
+Map.addLayer(aoi.style({color: '000000', fillColor: '00000000', width: 2}), {}, 'Study area');
 Map.addLayer(sites, {color: 'red'}, 'Sites');
 
 // ======================================================
@@ -128,6 +162,7 @@ var results = sites.map(function (ft) {
 });
 
 print('Site metrics', results);
+print('AOI', aoi);
 
 Export.table.toDrive({
   collection: results,

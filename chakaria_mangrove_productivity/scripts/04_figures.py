@@ -1,6 +1,7 @@
 """
 Publication-style figures for Chakaria mangrove uGPP analysis.
 
+Figure 0 — Study-area boundary + sites by group
 Figure 1 — Mean annual uGPP trajectories by group (2000–2024)
 Figure 2 — Temporal stability (Mean/SD) boxplots
 Figure 3 — Sen slope boxplots
@@ -13,22 +14,27 @@ Usage (from chakaria_mangrove_productivity/):
 from __future__ import annotations
 
 import argparse
+import json
 import sys
 from pathlib import Path
 
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+from matplotlib.patches import Polygon as MplPolygon
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from config import (  # noqa: E402
     ANNUAL_UGPP_CSV,
+    BOUNDARY_GEOJSON,
     FIGURE_DPI,
     FIGURES_DIR,
     GROUP_COLORS,
     GROUPS,
     SITE_METRICS_CSV,
+    SITES_CSV,
 )
 
 
@@ -46,6 +52,83 @@ def _style() -> None:
             "figure.dpi": 150,
         }
     )
+
+
+def _boundary_rings(path: Path) -> list[list[tuple[float, float]]]:
+    data = json.loads(path.read_text(encoding="utf-8"))
+
+    def rings_from_geom(geom: dict) -> list[list[tuple[float, float]]]:
+        gtype = geom["type"]
+        coords = geom["coordinates"]
+        if gtype == "Polygon":
+            return [[(float(x), float(y)) for x, y, *_ in ring] for ring in coords]
+        if gtype == "MultiPolygon":
+            out: list[list[tuple[float, float]]] = []
+            for poly in coords:
+                out.extend([(float(x), float(y)) for x, y, *_ in ring] for ring in poly)
+            return out
+        raise ValueError(f"Unsupported geometry: {gtype}")
+
+    if data["type"] == "FeatureCollection":
+        rings: list[list[tuple[float, float]]] = []
+        for ft in data["features"]:
+            rings.extend(rings_from_geom(ft["geometry"]))
+        return rings
+    if data["type"] == "Feature":
+        return rings_from_geom(data["geometry"])
+    return rings_from_geom(data)
+
+
+def fig0_study_area(
+    sites: pd.DataFrame,
+    boundary_path: Path,
+    out: Path,
+) -> None:
+    rings = _boundary_rings(boundary_path)
+    fig, ax = plt.subplots(figsize=(6.2, 6.4))
+
+    for i, ring in enumerate(rings):
+        xs, ys = zip(*ring)
+        ax.plot(
+            xs,
+            ys,
+            color="#222222",
+            lw=1.6,
+            zorder=2,
+            label="Study area" if i == 0 else None,
+        )
+        ax.add_patch(
+            MplPolygon(
+                list(zip(xs, ys)),
+                closed=True,
+                facecolor="#c7e9c0",
+                edgecolor="none",
+                alpha=0.35,
+                zorder=1,
+            )
+        )
+
+    for group in GROUPS:
+        sub = sites.loc[sites["Group"] == group]
+        ax.scatter(
+            sub["Longitude"],
+            sub["Latitude"],
+            s=42,
+            color=GROUP_COLORS[group],
+            edgecolors="#111111",
+            linewidths=0.4,
+            label=group,
+            zorder=3,
+        )
+
+    ax.set_xlabel("Longitude")
+    ax.set_ylabel("Latitude")
+    ax.set_title("Chakaria study area and sample sites")
+    ax.set_aspect("equal", adjustable="datalim")
+    ax.legend(frameon=False, loc="best")
+    fig.tight_layout()
+    fig.savefig(out, dpi=FIGURE_DPI, bbox_inches="tight")
+    plt.close(fig)
 
 
 def fig1_trajectories(ts: pd.DataFrame, out: Path) -> None:
@@ -115,9 +198,8 @@ def _boxplot_metric(
         patch.set_alpha(0.75)
         patch.set_edgecolor("#222222")
 
-    # overlay points
     rng = np.random.default_rng(0)
-    for i, (group, vals) in enumerate(zip(GROUPS, data), start=1):
+    for i, vals in enumerate(data, start=1):
         if vals.size == 0:
             continue
         jitter = rng.normal(0, 0.04, size=vals.size)
@@ -141,6 +223,16 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Make Chakaria uGPP figures")
     parser.add_argument("--timeseries", type=Path, default=ANNUAL_UGPP_CSV)
     parser.add_argument("--metrics", type=Path, default=SITE_METRICS_CSV)
+    parser.add_argument(
+        "--boundary",
+        type=Path,
+        default=BOUNDARY_GEOJSON,
+        help=(
+            "Study-area GeoJSON (default data/chakaria_boundary.geojson; "
+            r"copy from D:\A_letter_to_Science\chakaria_boundary.geojson)"
+        ),
+    )
+    parser.add_argument("--sites", type=Path, default=SITES_CSV)
     args = parser.parse_args()
 
     if not args.timeseries.exists() or not args.metrics.exists():
@@ -154,6 +246,12 @@ def main() -> None:
 
     ts = pd.read_csv(args.timeseries)
     metrics = pd.read_csv(args.metrics)
+
+    if args.boundary.exists() and args.sites.exists():
+        sites = pd.read_csv(args.sites)
+        fig0_study_area(sites, args.boundary, FIGURES_DIR / "Figure0_Study_Area.png")
+    else:
+        print(f"Skipping Figure 0 — boundary not found at {args.boundary}")
 
     fig1_trajectories(ts, FIGURES_DIR / "Figure1_Productivity_Trajectories.png")
     _boxplot_metric(

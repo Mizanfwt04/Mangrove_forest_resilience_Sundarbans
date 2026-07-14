@@ -21,6 +21,28 @@ End-to-end workflow for comparing **ecosystem function**, **temporal stability**
 
 **Hypothesis framing:** RMSP and PMSP maintain ecosystem functioning, stability, and positive productivity trajectories comparable to PMWSP — evidence that the former Chakaria Sundarbans retains restoration potential through silvofisheries.
 
+## Study-area boundary
+
+Authoritative boundary (your Windows path):
+
+```text
+D:\A_letter_to_Science\chakaria_boundary.geojson
+```
+
+Copy it into the project as:
+
+```text
+chakaria_mangrove_productivity/data/chakaria_boundary.geojson
+```
+
+```powershell
+# PowerShell
+Copy-Item "D:\A_letter_to_Science\chakaria_boundary.geojson" `
+  "chakaria_mangrove_productivity\data\chakaria_boundary.geojson"
+```
+
+Until that file is copied, the repo includes a **provisional** AOI (convex hull of the 30 sites + ~2.5 km buffer). Replace it with your GeoJSON before publication. The GEE extractor clips uGPP to this boundary and checks that all sites fall inside it.
+
 ## Project layout
 
 ```
@@ -30,12 +52,15 @@ chakaria_mangrove_productivity/
 ├── gee_extract.js              # Code Editor backup
 ├── requirements.txt
 ├── data/
-│   └── sites.csv               # 30 field sites
+│   ├── sites.csv               # 30 field sites
+│   └── chakaria_boundary.geojson  # study AOI (replace with your file)
 ├── scripts/
 │   ├── 01_extract_gee.py       # GEE / geemap extraction
 │   ├── 02_temporal_metrics.py  # Mean, SD, TS, Sen, MK
 │   ├── 03_statistics.py        # Kruskal + post-hoc
-│   ├── 04_figures.py           # Figures 1–4
+│   ├── 04_figures.py           # Figures 0–4
+│   ├── boundary_utils.py       # GeoJSON ↔ EE helpers
+│   ├── make_provisional_boundary.py
 │   └── make_demo_data.py       # Offline synthetic series
 └── outputs/
     ├── tables/

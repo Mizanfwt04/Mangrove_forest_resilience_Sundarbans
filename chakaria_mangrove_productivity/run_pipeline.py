@@ -36,8 +36,13 @@ def main() -> None:
 
     py = sys.executable
 
+    # Ensure a study-area GeoJSON exists (provisional unless user copied theirs)
+    boundary = ROOT / "data" / "chakaria_boundary.geojson"
+    if not boundary.exists():
+        run([py, "scripts/make_provisional_boundary.py"])
+
     if args.gee:
-        cmd = [py, "scripts/01_extract_gee.py"]
+        cmd = [py, "scripts/01_extract_gee.py", "--boundary", str(boundary)]
         if args.project:
             cmd += ["--project", args.project]
         run(cmd)

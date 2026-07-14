@@ -15,6 +15,9 @@ FIGURES_DIR = OUTPUT_DIR / "figures"
 TABLES_DIR = OUTPUT_DIR / "tables"
 
 SITES_CSV = DATA_DIR / "sites.csv"
+# Study-area polygon. Copy from:
+#   D:\A_letter_to_Science\chakaria_boundary.geojson
+BOUNDARY_GEOJSON = DATA_DIR / "chakaria_boundary.geojson"
 ANNUAL_UGPP_CSV = DATA_DIR / "annual_ugpp.csv"
 SITE_METRICS_CSV = TABLES_DIR / "site_metrics.csv"
 GROUP_SUMMARY_CSV = TABLES_DIR / "group_summary.csv"
