@@ -2,6 +2,8 @@
 
 Public site for **GAINS** — Geospatial Artificial Intelligence in Nature Services.
 
+**Live domain:** [thegains.org](https://thegains.org)
+
 ## Local preview
 
 ```bash
@@ -10,31 +12,17 @@ python3 -m http.server 8080 --directory docs
 
 Visit `http://localhost:8080`.
 
-## GitHub Pages status
+## GitHub Pages
 
-Pages is already configured for this repo:
+- Publishing branch: `gh-pages` → `/`
+- Custom domain: `thegains.org` (see `CNAME`)
 
-- Branch: `gh-pages` → `/` (root)
-- Custom domain: `gains.org`
+## DNS at Namecheap (required once)
 
-The site also lives in `docs/` on `main` for editing.
-
-## Fix: “Domain gains.org is not eligible for HTTPS”
-
-That message means **DNS does not point at GitHub yet**. GitHub can only issue a certificate after DNS is correct.
-
-### What DNS shows today (broken)
-
-| Record | Current value | Problem |
-|--------|---------------|---------|
-| `gains.org` A | `54.69.149.217` (AWS) | Must be GitHub Pages IPs |
-| `www.gains.org` | `54.69.149.217` | Must be CNAME → `mizanfwt04.github.io` |
-
-### Fix in Namecheap (or your registrar)
-
-1. Log in → **Domain List** → **gains.org** → **Advanced DNS**.
-2. **Delete** every old `A` / `AAAA` / `CNAME` / URL Redirect / Parking record for `@` and `www` (including any pointing to `54.69.149.217`).
-3. **Add exactly these records:**
+1. Namecheap → **Domain List** → **thegains.org** → **Manage**
+2. Open **Advanced DNS**
+3. Delete parking / old URL Redirect / old A records for `@` and `www`
+4. Add:
 
 | Type | Host | Value | TTL |
 |------|------|--------|-----|
@@ -44,27 +32,10 @@ That message means **DNS does not point at GitHub yet**. GitHub can only issue a
 | A Record | `@` | `185.199.111.153` | Automatic |
 | CNAME Record | `www` | `mizanfwt04.github.io` | Automatic |
 
-4. Optional but recommended (helps HTTPS):
+5. GitHub → repo **Settings → Pages** → Custom domain: `thegains.org` → **Save**
+6. Wait for DNS check → enable **Enforce HTTPS**
 
-| Type | Host | Value |
-|------|------|--------|
-| AAAA Record | `@` | `2606:50c0:8000::153` |
-| AAAA Record | `@` | `2606:50c0:8001::153` |
-| AAAA Record | `@` | `2606:50c0:8002::153` |
-| AAAA Record | `@` | `2606:50c0:8003::153` |
+## Email (optional, later)
 
-5. Wait 5–60 minutes (sometimes up to a few hours). Check with:
-
-```bash
-dig +short gains.org A
-# must show only: 185.199.108.153 … 185.199.111.153
-dig +short www.gains.org CNAME
-# must show: mizanfwt04.github.io.
-```
-
-6. GitHub → **Settings → Pages**:
-   - Remove custom domain → Save
-   - Re-enter `gains.org` → Save (forces a new certificate request)
-   - When the checkmark appears, enable **Enforce HTTPS**
-
-Until step 3 is done at Namecheap, HTTPS will stay unavailable. I cannot change Namecheap DNS from this agent — only you can, while logged into the registrar.
+- Free: Cloudflare Email Routing → forward `info@thegains.org` to Gmail  
+- Or Namecheap Private Email for a full mailbox  
