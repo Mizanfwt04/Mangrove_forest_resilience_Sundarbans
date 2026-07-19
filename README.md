@@ -8,7 +8,7 @@ This project analyzes the resilience of mangrove forests in the Sundarbans to cy
 
 ## GAINS website
 
-**GAINS** — Geospatial Artificial Intelligence in Nature Services — has a public landing site in [`docs/`](./docs/), prepared for GitHub Pages and the custom domain `gains.org`.
+**GAINS** — Geospatial Artificial Intelligence in Nature Services — has a public landing site in [`docs/`](./docs/), published for GitHub Pages at **[thegains.org](https://thegains.org)**.
 
 - Preview locally: `python3 -m http.server 8080 --directory docs`
 - Domain and Pages setup: see [`docs/README.md`](./docs/README.md)
