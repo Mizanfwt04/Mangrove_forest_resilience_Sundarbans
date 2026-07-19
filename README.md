@@ -6,6 +6,13 @@ This repository contains the code for analyzing mangrove forest resilience in th
 
 This project analyzes the resilience of mangrove forests in the Sundarbans to cyclone disturbances using kernel Normalized Difference Vegetation Index (kNDVI) time series data from 2000-2024. The analysis includes perturbation detection, recovery dynamics, and spatial mapping of disturbance indices.
 
+## GAINS website
+
+**GAINS** — Geospatial Artificial Intelligence in Nature Services — has a public landing site in [`docs/`](./docs/), prepared for GitHub Pages and the custom domain `gains.org`.
+
+- Preview locally: `python3 -m http.server 8080 --directory docs`
+- Domain and Pages setup: see [`docs/README.md`](./docs/README.md)
+
 ## Research Objectives
 
 - Assess mangrove forest resilience to cyclone disturbances in the Sundarbans
