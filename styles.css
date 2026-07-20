@@ -305,6 +305,80 @@ img {
   color: rgba(243, 247, 244, 0.78);
 }
 
+.ebv-list,
+.resource-list,
+.profile-meta {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ebv-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.ebv-list li {
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.ebv-list h3 {
+  margin: 0 0 0.4rem;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.ebv-list p {
+  margin: 0;
+  color: rgba(243, 247, 244, 0.78);
+}
+
+.profile-meta {
+  display: grid;
+  gap: 0.65rem;
+  max-width: 40rem;
+  color: rgba(243, 247, 244, 0.82);
+}
+
+.profile-meta li {
+  padding-left: 0;
+  border-left: 2px solid var(--signal);
+  padding-left: 0.9rem;
+}
+
+.resource-list {
+  display: grid;
+  gap: 0;
+}
+
+.resource-list li {
+  border-top: 1px solid var(--line);
+}
+
+.resource-list li:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.resource-list a {
+  display: block;
+  padding: 1.15rem 0;
+  transition: color 0.2s ease;
+}
+
+.resource-list a:hover,
+.resource-list a:focus-visible {
+  color: var(--signal);
+}
+
+.resource-list span {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.85rem;
+  color: rgba(243, 247, 244, 0.55);
+}
+
 .contact .btn {
   margin-top: 0.25rem;
 }
@@ -407,6 +481,11 @@ img {
   .focus-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+  }
+
+  .ebv-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem 2rem;
   }
 }
 

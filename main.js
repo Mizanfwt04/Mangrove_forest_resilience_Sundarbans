@@ -2,7 +2,7 @@
   const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   const revealTargets = document.querySelectorAll(
-    ".section h2, .section-copy, .work-list li, .focus-grid article, .contact .btn"
+    ".section h2, .section-copy, .work-list li, .focus-grid article, .ebv-list li, .profile-meta li, .resource-list li, .contact .btn"
   );
 
   revealTargets.forEach((el) => el.classList.add("reveal"));
