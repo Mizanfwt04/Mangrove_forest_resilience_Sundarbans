@@ -56,7 +56,7 @@
       <a class="brand-mark" href="#top" aria-label="The Gains home">The Gains</a>
       <nav class="site-nav" aria-label="Primary">
         <a href="#theory">Theory</a>
-        <a href="#methods">Methods</a>
+        <a href="#scale">Approach</a>
         <a href="#resources">Resources</a>
         <a href="#contact" class="nav-cta">Connect</a>
       </nav>
@@ -165,12 +165,67 @@
             <div>
               <h3>Multi-scale GeoAI</h3>
               <p>
-                Field plots → UAV/TLS → airborne → satellites (GEDI, Sentinel,
-                Landsat, TanDEM-X), fused with machine learning and Earth Engine.
+                The monitoring pyramid below — fused with machine learning and
+                Google Earth Engine to scale SEM-tested mechanisms.
               </p>
             </div>
           </li>
         </ul>
+      </section>
+
+      <section class="section scale" id="scale">
+        <p class="section-kicker">Approach</p>
+        <h2>Multi-scale monitoring</h2>
+        <p class="section-copy">
+          One pipeline from ground truth to Earth observation — so models stay
+          tied to ecological reality.
+        </p>
+
+        <figure class="scale-diagram" aria-label="Multi-scale monitoring pyramid">
+          <svg viewBox="0 0 640 420" role="img" aria-labelledby="scaleTitle scaleDesc">
+            <title id="scaleTitle">Multi-scale monitoring pyramid</title>
+            <desc id="scaleDesc">
+              From field plots at the base through drones, terrestrial LiDAR, and
+              airborne platforms to satellites at the top.
+            </desc>
+
+            <!-- pyramid tiers (top to bottom visually, satellite at top) -->
+            <polygon points="270,28 370,28 400,88 240,88" fill="#9fd6c4" />
+            <polygon points="240,100 400,100 430,160 210,160" fill="#5eb8a0" />
+            <polygon points="210,172 430,172 470,232 170,232" fill="#2f8f7a" />
+            <polygon points="170,244 470,244 520,310 120,310" fill="#1f7a68" />
+            <polygon points="120,322 520,322 580,400 60,400" fill="#145c52" />
+
+            <!-- upward flow arrows -->
+            <g fill="#e2b15a" opacity="0.95">
+              <polygon points="320,92 312,104 328,104" />
+              <polygon points="320,164 312,176 328,176" />
+              <polygon points="320,236 312,248 328,248" />
+              <polygon points="320,314 312,326 328,326" />
+            </g>
+
+            <!-- labels -->
+            <g fill="#071b1a" font-family="Sora, sans-serif" text-anchor="middle">
+              <text x="320" y="62" font-size="15" font-weight="700">Satellites</text>
+              <text x="320" y="78" font-size="10" fill="#102820">GEDI · Sentinel · Landsat · TanDEM-X</text>
+
+              <text x="320" y="134" font-size="15" font-weight="700">Airborne</text>
+              <text x="320" y="150" font-size="10" fill="#102820">Landscape mapping</text>
+
+              <text x="320" y="206" font-size="15" font-weight="700" fill="#f3f7f4">Terrestrial LiDAR</text>
+              <text x="320" y="222" font-size="10" fill="#d7e8df">3D stand architecture</text>
+
+              <text x="320" y="278" font-size="15" font-weight="700" fill="#f3f7f4">UAV / drone</text>
+              <text x="320" y="294" font-size="10" fill="#d7e8df">Fine-scale canopy &amp; structure</text>
+
+              <text x="320" y="360" font-size="15" font-weight="700" fill="#f3f7f4">Field plots</text>
+              <text x="320" y="378" font-size="10" fill="#d7e8df">Carbon · traits · biodiversity</text>
+            </g>
+          </svg>
+          <figcaption class="scale-caption">
+            Ground truth anchors every layer — GeoAI and SEM scale the same ecological mechanisms upward.
+          </figcaption>
+        </figure>
       </section>
 
       <section class="section profile-visual" id="profile">
