@@ -384,6 +384,54 @@ img {
   font-weight: 600;
 }
 
+.lab-board {
+  display: grid;
+  gap: 1.75rem;
+  align-items: start;
+}
+
+.lab-board__label {
+  margin: 0 0 0.75rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(159, 214, 196, 0.9);
+}
+
+.pyramid,
+.toolkit {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.pyramid li,
+.toolkit li {
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--line);
+  background: rgba(7, 27, 26, 0.35);
+  font-size: 0.92rem;
+  color: rgba(243, 247, 244, 0.88);
+}
+
+.pyramid li {
+  text-align: center;
+}
+
+.pyramid li:nth-child(1) { width: 58%; margin-inline: auto; }
+.pyramid li:nth-child(2) { width: 72%; margin-inline: auto; }
+.pyramid li:nth-child(3) { width: 86%; margin-inline: auto; }
+.pyramid li:nth-child(4) { width: 100%; }
+
+.lab-scape {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  display: block;
+}
+
 .resource-list {
   display: grid;
   gap: 0;
@@ -512,6 +560,12 @@ img {
 
   .work-list li:last-child {
     border-bottom: 0;
+  }
+
+  .lab-board {
+    grid-template-columns: 0.9fr 1.4fr 0.9fr;
+    gap: 1.5rem;
+    align-items: center;
   }
 
   .focus-grid {
