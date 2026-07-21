@@ -9,8 +9,9 @@ GAINS is an international research institute advancing **AI-powered nature solut
 
 ## What we are building toward
 
-- Forest Carbon & Climate (MRV, JREDD+, sequestration, stability)
-- Biodiversity & Ecosystem Functioning (functional composition, SEM, resilience)
+- Forest Carbon & Climate Change (MRV, JREDD+, sequestration, stability)
+- Climate Extremes, Resilience & Tipping Points (CSD, kNDVI, compound extremes, early warning)
+- Biodiversity & Ecosystem Functioning (functional composition, SEM, multifunctionality)
 - AI for Earth (ML/DL, GeoAI, foundation models, XAI)
 - Remote Sensing (satellite, drone, LiDAR, GEDI, hyperspectral, radar)
 - Digital Twin Forests
