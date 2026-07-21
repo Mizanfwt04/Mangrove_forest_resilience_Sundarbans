@@ -23,5 +23,6 @@ Not a personal CV page and not a generic AI shop. Theory first; AI and Earth obs
 ## Founder & Director
 
 Dr. Md Mizanur Rahman — PolyU · mizanfwt04@gmail.com  
-~1,483 citations · h-index 14 · i10-index 19 · 20+ papers  
+1,483 citations · h-index 14 · i10-index 19 · 20+ papers  
+(Google Scholar, June 2026)
 Kyoto · NASA Goddard · HKU · Jiangmen/HKUST · PolyU
