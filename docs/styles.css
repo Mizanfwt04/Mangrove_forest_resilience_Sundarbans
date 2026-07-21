@@ -475,6 +475,13 @@ img {
   color: var(--foam);
 }
 
+.metrics-note {
+  margin: -0.5rem 0 1.5rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  color: rgba(243, 247, 244, 0.55);
+}
+
 .lead-highlights {
   list-style: none;
   margin: 0;
