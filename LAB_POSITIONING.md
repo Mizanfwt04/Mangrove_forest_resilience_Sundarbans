@@ -16,6 +16,18 @@ GAINS is an international research institute advancing **AI-powered nature solut
 - Remote Sensing (satellite, drone, LiDAR, GEDI, hyperspectral, radar)
 - Digital Twin Forests
 
+## Policy alignment (cite as research alignment, not delivery claims)
+
+- SDG 13 Climate Action · SDG 14 Life Below Water · SDG 15 Life on Land
+- Kunming–Montreal GBF Targets 2, 3, 8, 11, 21
+
+## Affiliation note
+
+Research Fellow pathways at PolyU include JC STEM Lab of Earth Observations and
+RCAIG (Research Centre for Artificial Intelligence in Geomatics), including
+support via the Research Talent Hub (RTH) under Hong Kong’s Innovation and
+Technology Fund (ITF).
+
 ## Institute posture
 
 Not a personal CV page and not a generic AI shop. Theory first; AI and Earth observation scale mechanism for governments, universities, NGOs, and industry.
@@ -24,5 +36,5 @@ Not a personal CV page and not a generic AI shop. Theory first; AI and Earth obs
 
 Dr. Md Mizanur Rahman — PolyU · mizanfwt04@gmail.com  
 1,497 citations · h-index 13 · i10-index 19 · 20+ papers  
-(Google Scholar, July 2026)
-Kyoto · NASA Goddard · HKU · Jiangmen/HKUST · PolyU
+(Google Scholar, July 2026)  
+Kyoto · NASA Goddard · HKU · Jiangmen/HKUST · PolyU (JC STEM / RCAIG · RTH ITF)
