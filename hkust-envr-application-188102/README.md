@@ -12,11 +12,12 @@
 
 | File | Purpose | Suggested length |
 |------|---------|------------------|
-| `cover_letter.md` | Letter of interest to search committee | 2 pages |
-| `research_statement.md` | Research vision and 5-year programme | 4–5 pages |
-| `teaching_statement.md` | Teaching philosophy and course proposals | 3–4 pages |
+| `cover_letter.md` / **`Cover_Letter_Rahman_HKUST_ENVR.docx`** | Letter of interest to search committee | 2 pages |
+| `research_statement.md` / **`Research_Statement_Rahman_HKUST_ENVR.docx`** | Research vision and 5-year programme | 4–5 pages |
+| `teaching_statement.md` / **`Teaching_Statement_Rahman_HKUST_ENVR.docx`** | Teaching philosophy and course proposals | 3–4 pages |
 | `referees.md` | Referee contact template | 1 page |
 | `cv_highlights.md` | Key bullets to verify/update in your full CV | — |
+| `build_word_docs.py` | Regenerate `.docx` after editing markdown | — |
 
 **You still need to supply:** your full CV (PDF) — use your existing CV from thegains.org and ensure it matches the highlights file.
 
@@ -26,7 +27,7 @@
 
 ### 1. Personalise placeholders
 - [ ] Add your email and phone in `cover_letter.md` (replace `[your email]`, `[your phone]`)
-- [ ] Confirm citation metrics (1,497 citations; h-index 13 — July 2026)
+- [ ] Confirm citation metrics (1,500+ citations; h-index 14 — July 2026)
 - [ ] Export all documents to **PDF** for Interfolio upload
 
 ### 2. Interfolio upload checklist
@@ -69,14 +70,19 @@ Typical HKUST faculty application materials:
 
 ## Converting Markdown to PDF
 
+**Word files are already generated** — use the `.docx` files directly, or open in Word and **Save as PDF** for Interfolio.
+
+To regenerate Word after editing markdown:
+
 ```bash
-# If pandoc is installed:
-pandoc cover_letter.md -o cover_letter.pdf
-pandoc research_statement.md -o research_statement.pdf
-pandoc teaching_statement.md -o teaching_statement.pdf
+cd hkust-envr-application-188102 && python3 build_word_docs.py
 ```
 
-Or paste into Word/Google Docs, format with 11–12 pt font, 1-inch margins, and export PDF.
+Alternatively, with pandoc:
+
+```bash
+pandoc cover_letter.md -o cover_letter.pdf
+```
 
 ---
 

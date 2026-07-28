@@ -11,7 +11,7 @@ Research Fellow, Remote Sensing Laboratory, The Hong Kong Polytechnic University
 Founder & Director, GAINS (Global Artificial Intelligence and Nature Solutions)  
 Email: [polyu.edu.hk address] · Web: https://thegains.org/ · Google Scholar: [link]
 
-**Profile (3–4 lines):** Forest ecologist researching biodiversity–ecosystem functioning, ecosystem services, and nature-based solutions under climate change. Integrates field ecology, UAV/LiDAR, satellite remote sensing, SEM, and GeoAI. 20+ peer-reviewed articles; 1,497 citations (h-index 13, July 2026).
+**Profile (3–4 lines):** Forest ecologist researching biodiversity–ecosystem functioning, ecosystem services, and nature-based solutions under climate change. Integrates field ecology, UAV/LiDAR, satellite remote sensing, SEM, and GeoAI. 20+ peer-reviewed articles; 1,500+ citations (h-index 14, July 2026).
 
 ---
 
@@ -112,7 +112,7 @@ Biodiversity and ecosystem functioning · Ecosystem services · Nature-based sol
 
 ## Metrics (as of July 2026)
 
-- Citations: 1,497 | h-index: 13 | i10-index: 19 (Google Scholar)  
+- Citations: 1,500+ | h-index: 14 | i10-index: 19 (Google Scholar, July 2026)  
 - Articles: 20+ peer-reviewed
 
 ---
