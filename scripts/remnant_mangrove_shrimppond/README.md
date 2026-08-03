@@ -1,49 +1,57 @@
-# Remnant mangrove within shrimp ponds (Clark CGA collection)
+# Your Clark zips (local)
 
-Uses **your already-downloaded** Clark / Moore aquaculture–coastal landcover GeoTIFFs.
-
-**No downloads.** Point the script at the folder you already have.
-
-## Your data
+Point `--clark-dir` at:
 
 ```text
 C:\Users\Md Mizanur Rahman\OneDrive\Desktop\scripts\outputs\agb_stability\shrimppond
 ```
 
-Clark legend (15 m): `1` Mangrove · `2` Coastal Wetland · `3` Pond Aquaculture · `4` Water · `5` Other · `6` Missing
+Expected zips in that folder (15 you listed):
 
-Clark countries (17): Bangladesh, Brazil, Cambodia, China, Ecuador, El Salvador, Honduras, India, Indonesia, Malaysia, Mexico, Myanmar, Nicaragua, Philippines, Sri Lanka, Thailand, Vietnam.
+| Zip |
+|-----|
+| Bangladesh_Landcover_Change_Maps_1999_2014_2018_2020_2022.zip |
+| Cambodia_Landcover_Change_Maps_1999_2014_2018_2020_2022.zip |
+| china_landcover_change_maps_1999_2014_2018_2020_2022.zip |
+| ecuador_landcover_change_maps_1999_2014_2018_2020_2022_2024.zip |
+| elsalvador_landcover_change_maps_1999_2014_2018_2020_2022.zip |
+| honduras_landcover_change_maps_1999_2014_2018_2020_2022.zip |
+| india_landcover_change_maps_1999_2014_2018_2020_2022.zip |
+| indonesia_landcover_change_maps_1999_2014_2018_2020_2022_2024.zip |
+| Malaysia_Landcover_Change_Maps_1999_2014_2018_2020_2022.zip |
+| mexico_landcover_change_maps_1999_2014_2018_2020_2022.zip |
+| myanmar_landcover_change_maps_1999_2014_2018_2020_2022_2024.zip |
+| Philippines_Change_Persistence_Maps_1999_to_2022.zip |
+| SriLanka_Landcover_Change_Maps_1999_2014_2018_2020_2022.zip |
+| thailand_landcover_change_maps_1999_2014_2018_2020_2022_2024.zip |
+| vietnam_landcover_change_maps_1999_2014_2018_2020_2022_2024.zip |
 
-## Remnant definition
+Not in your list (Clark has 17 total): **Brazil**, **Nicaragua**.
 
-Clark classes do not overlap on one pixel, so remnant is **mangrove embedded in the aquaculture landscape**:
+## Run on your PC (no download)
 
-- mangrove with ≥30% Pond Aquaculture in a ~315 m neighborhood, and/or  
-- mangrove adjacent to ponds (15–45 m)
-
-## Run (local only)
-
-```bash
-cd scripts/remnant_mangrove_shrimppond
+```powershell
+cd <repo>\scripts\remnant_mangrove_shrimppond
 pip install -r requirements.txt
 
-# see what Clark TIFFs you already have
-python map_clark_remnant.py --list-only \
-  --clark-dir "C:/Users/Md Mizanur Rahman/OneDrive/Desktop/scripts/outputs/agb_stability/shrimppond"
+$dir = "C:\Users\Md Mizanur Rahman\OneDrive\Desktop\scripts\outputs\agb_stability\shrimppond"
 
-# Chakaria remnant mangrove in aquaculture
-python map_clark_remnant.py \
-  --clark-dir "C:/Users/Md Mizanur Rahman/OneDrive/Desktop/scripts/outputs/agb_stability/shrimppond" \
-  --country bangladesh --year 2022 --aoi chakaria
+# confirm zips
+python map_clark_remnant.py --list-only --clark-dir $dir
 
-# or pass the exact TIFF
-python map_clark_remnant.py \
-  --tif "C:/Users/.../shrimppond/Bangladesh_Landcover_2022_v1exp.tif" \
-  --aoi chakaria
+# all countries → remnant mangrove in aquaculture summary
+python map_clark_remnant.py --all-countries --clark-dir $dir --year 2022
+
+# Chakaria only
+python map_clark_remnant.py --country bangladesh --year 2022 --aoi chakaria --clark-dir $dir
 ```
 
-Outputs → `outputs/*_remnant_map.png`, `*_remnant.tif`, `*_remnant_stats.csv`
+Zips are extracted once to `$dir\_extracted\`. Output CSV:
 
-## GEE (optional)
+`outputs/clark_countries_remnant_mangrove_in_aquaculture.csv`
 
-`remnant_mangrove_shrimppond.js` — only if you upload **your** Clark TIFF as an EE asset (`POND_ASSET` / landcover asset). It does not fetch Clark from the web.
+## Remnant definition (Clark)
+
+`1` Mangrove · `3` Pond Aquaculture (mutually exclusive pixels)
+
+Remnant = mangrove in a pond-dominated neighborhood (≥30% ponds in ~315 m) and/or mangrove adjacent to ponds.
