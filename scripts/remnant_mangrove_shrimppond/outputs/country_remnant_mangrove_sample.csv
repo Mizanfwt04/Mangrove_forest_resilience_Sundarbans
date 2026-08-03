@@ -1,0 +1,78 @@
+country,lat,lon,sample_remnant_in_pond_ha,has_remnant_mangrove_in_aquaculture,note,sample_mangrove_ha,sample_pond_ha
+Albania,40.57555004489022,19.45217650063716,0.0,False,outside_mangrove_lat,,
+Angola,-7.973,13.185,0.0,False,ok,1115.63,278.82
+Australia,-38.00053559667913,144.61637603807543,0.0,False,outside_mangrove_lat,,
+Azerbaijan,39.445632412024175,48.779723161886054,0.0,False,outside_mangrove_lat,,
+Bangladesh,22.533,89.079,1.74,True,ok,102.09,101533.71
+Belize,17.071,-88.309,0.01,False,ok,12334.27,178.14
+Benin,6.472,2.583,0.43,True,ok,466.46,549.91
+Brazil,-5.036,-37.218,64.49,True,ok,234.2,13966.32
+Bulgaria,43.770400722093754,23.80292709327619,0.0,False,outside_mangrove_lat,,
+Cambodia,10.372,104.565,937.27,True,ok,2580.37,17877.38
+Chile,-25.456,-70.52,0.0,False,ok,0.0,0.2
+China,38.10125183027168,117.94182767816358,0.0,False,outside_mangrove_lat,,
+Christmas Island,-10.45,105.65,0.0,False,ok,0.0,0.08
+Colombia,10.136,-75.521,34.01,True,ok,1509.4,1816.74
+Costa Rica,10.398,-85.115,24.77,True,ok,12112.24,953.43
+Croatia,44.24011849415395,15.191052337317519,0.0,False,outside_mangrove_lat,,
+Ecuador,-2.323,-79.814,1.07,True,ok,1146.56,15809.79
+Egypt,31.429,30.947,0.0,False,ok,0.0,40114.44
+El Salvador,13.292,-88.678,96.69,True,ok,32207.03,876.37
+France,43.378802874108956,4.7820029796729155,0.0,False,outside_mangrove_lat,,
+Ghana,6.053,1.063,708.62,True,ok,12802.34,3536.86
+Greece,38.394124018210704,21.38253652649469,0.0,False,outside_mangrove_lat,,
+Guatemala,13.929,-91.097,246.06,True,ok,4775.88,706.18
+Guinea,9.249,-13.291,131.99,True,ok,103235.59,139.54
+Guyana,6.299,-57.419,0.0,False,ok,6921.92,133.11
+Honduras,13.026,-87.207,156.96,True,ok,3860.21,7381.88
+India,16.579,81.037,9.29,True,ok,178.88,106490.22
+Indonesia,-7.052,112.448,917.88,True,ok,1464.73,38542.93
+Iran,31.079,48.632,0.0,False,ok,0.0,3653.39
+Iraq,30.84,47.061,0.0,False,ok,0.0,18002.82
+Israel,31.086,35.419,0.0,False,ok,0.0,17930.83
+Italy,44.996354812563155,12.439605112018008,0.0,False,outside_mangrove_lat,,
+Jordan,31.161,35.491,0.0,False,ok,0.0,13199.58
+Kazakhstan,45.106390916129484,51.44111070356646,0.0,False,outside_mangrove_lat,,
+Kenya,-2.887,40.148,1.58,True,ok,6833.56,4629.63
+Laos,14.057,105.804,0.0,False,ok,0.0,0.29
+Lithuania,55.39404383188143,21.27419971589552,0.0,False,outside_mangrove_lat,,
+Madagascar,-16.6,44.472,0.0,False,ok,8909.86,485.94
+Malaysia,1.364,104.171,61.39,True,ok,20289.94,1698.67
+Mexico,25.469,-108.713,20.89,True,ok,3404.49,3961.68
+Moldova,45.84914575862217,28.12583935910888,0.0,False,outside_mangrove_lat,,
+Montenegro,41.92746752691836,19.318222896014568,0.0,False,outside_mangrove_lat,,
+Mozambique,-14.614,40.618,0.39,True,ok,3044.04,441.86
+Myanmar,16.773,95.81,0.0,False,ok,0.0,30414.82
+Namibia,-23.045,14.443,0.0,False,ok,0.0,1949.85
+New Caledonia,-20.951,164.67,1.4,True,ok,10948.46,41.19
+New Zealand,-41.71601773619375,174.14359237793235,0.0,False,outside_mangrove_lat,,
+Nicaragua,12.904,-87.397,241.47,True,ok,1910.38,3358.29
+Nigeria,4.882,6.212,0.0,False,ok,63835.01,4.31
+North Korea,39.34681158190767,125.4151661529418,0.0,False,outside_mangrove_lat,,
+Oman,23.602,58.287,0.0,False,ok,61.95,193.85
+Pakistan,24.587,67.912,0.0,False,ok,0.0,3571.15
+Panama,8.141,-80.518,4.26,True,ok,1172.76,2848.52
+Peru,-3.518,-80.412,33.79,True,ok,17802.22,3577.65
+Philippines,14.858,120.658,191.78,True,ok,507.87,60494.38
+Portugal,40.62274738957831,-8.674346391456925,0.0,False,outside_mangrove_lat,,
+Qatar,25.324,51.526,0.0,False,ok,36.74,133.66
+Romania,45.17494320650701,28.83028269006239,0.0,False,outside_mangrove_lat,,
+Russia,46.07652549871595,48.12284586860588,0.0,False,outside_mangrove_lat,,
+Saudi Arabia,20.31,39.923,0.0,False,ok,0.0,4727.42
+Slovenia,45.476564674563264,13.59890292305364,0.0,False,outside_mangrove_lat,,
+South Africa,-33.856123116272926,25.583201308726302,0.0,False,outside_mangrove_lat,,
+South Korea,34.75366608348678,125.96020648897766,0.0,False,outside_mangrove_lat,,
+Spain,36.94039021850533,-6.230241419423116,0.0,False,outside_mangrove_lat,,
+Sri Lanka,7.968,79.818,28.7,True,ok,1806.97,3024.24
+Suriname,5.93,-55.033,1.21,True,ok,33146.06,282.45
+Syria,35.24559737629755,35.9444462212307,0.0,False,outside_mangrove_lat,,
+Tanzania,-6.199,38.848,13.45,True,ok,6619.21,1044.77
+Thailand,13.55,100.441,408.79,True,ok,1011.7,26595.58
+Tunisia,34.649527614803034,10.710770358648617,0.0,False,outside_mangrove_lat,,
+Turkey,38.506375355653745,26.907642342582662,0.0,False,outside_mangrove_lat,,
+Ukraine,46.57380886223994,32.45561105438014,0.0,False,outside_mangrove_lat,,
+United Arab Emirates,24.09,53.914,0.0,False,ok,0.0,2600.4
+United States,33.544285096557445,-90.40726883523132,0.0,False,outside_mangrove_lat,,
+Venezuela,10.146,-71.979,4.41,True,ok,272.46,3647.75
+Vietnam,9.196,105.105,871.38,True,ok,12372.57,381930.88
+Yemen,12.854,45.007,0.0,False,ok,0.0,824.82
