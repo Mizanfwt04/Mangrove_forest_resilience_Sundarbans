@@ -26,9 +26,17 @@ Expected zips in that folder (15 you listed):
 | thailand_landcover_change_maps_1999_2014_2018_2020_2022_2024.zip |
 | vietnam_landcover_change_maps_1999_2014_2018_2020_2022_2024.zip |
 
-Not in your list (Clark has 17 total): **Brazil**, **Nicaragua**.
+Full Clark set is **17** countries. Brazil + Nicaragua zips:
 
-## Run on your PC (no download)
+```powershell
+# save into the SAME shrimppond folder as your other Clark zips
+python fetch_missing_clark.py --only brazil nicaragua `
+  --clark-dir "C:\Users\Md Mizanur Rahman\OneDrive\Desktop\scripts\outputs\agb_stability\shrimppond"
+```
+
+(Already fetched in-repo under `scripts/outputs/agb_stability/shrimppond/` — Brazil ~319 MB is gitignored; use the fetch script on your PC.)
+
+## Run on your PC
 
 ```powershell
 cd <repo>\scripts\remnant_mangrove_shrimppond

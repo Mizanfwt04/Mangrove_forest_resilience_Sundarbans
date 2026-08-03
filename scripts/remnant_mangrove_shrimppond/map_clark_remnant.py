@@ -51,6 +51,7 @@ OUT = ROOT / "outputs"
 # Exact zip names you listed (plus any others already in the folder)
 KNOWN_ZIPS = [
     "Bangladesh_Landcover_Change_Maps_1999_2014_2018_2020_2022.zip",
+    "brazil_landcover_change_maps_1999_2014_2018_2020_2022.zip",
     "Cambodia_Landcover_Change_Maps_1999_2014_2018_2020_2022.zip",
     "china_landcover_change_maps_1999_2014_2018_2020_2022.zip",
     "ecuador_landcover_change_maps_1999_2014_2018_2020_2022_2024.zip",
@@ -61,6 +62,7 @@ KNOWN_ZIPS = [
     "Malaysia_Landcover_Change_Maps_1999_2014_2018_2020_2022.zip",
     "mexico_landcover_change_maps_1999_2014_2018_2020_2022.zip",
     "myanmar_landcover_change_maps_1999_2014_2018_2020_2022_2024.zip",
+    "nicaragua_landcover_change_maps_1999_2014_2018_2020_2022.zip",
     "Philippines_Change_Persistence_Maps_1999_to_2022.zip",
     "SriLanka_Landcover_Change_Maps_1999_2014_2018_2020_2022.zip",
     "thailand_landcover_change_maps_1999_2014_2018_2020_2022_2024.zip",
