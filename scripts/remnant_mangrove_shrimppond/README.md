@@ -1,65 +1,49 @@
-# Your Clark zips (local)
+# Remnant mangrove in shrimp-pond areas (Clark CGA)
 
-Point `--clark-dir` at:
+Maps **shrimp-pond landscapes where mangrove still exists as remnants**, using the Clark / Moore coastal landcover collection.
 
-```text
-C:\Users\Md Mizanur Rahman\OneDrive\Desktop\scripts\outputs\agb_stability\shrimppond
+## Results (Clark ~2022)
+
+**All 17 Clark countries** have remnant mangrove in shrimp-pond landscapes.
+
+| | Area |
+|--|------|
+| Remnant mangrove (in/near ponds) | **≈ 515,000 ha** |
+| Shrimp ponds within 45 m of mangrove | **≈ 620,000 ha** |
+
+Largest pond–remnant interfaces: **Indonesia**, **Vietnam**, **Thailand**, **Ecuador**, **Philippines**.
+
+| File | Content |
+|------|---------|
+| `outputs/clark_remnant_mangrove_in_shrimpponds.csv` | Country table |
+| `outputs/clark_remnant_shrimppond_bar.png` | Bar chart |
+| `outputs/country_previews/*_remnant_shrimppond.png` | Per-country maps |
+| `outputs/chakaria_clark_remnant_shrimppond.png` | Chakaria close-up |
+
+## What is mapped
+
+Clark classes (15 m): `1` Mangrove · `3` Pond Aquaculture
+
+- **Remnant mangrove** = mangrove with ≥30% ponds nearby (~315 m) **or** mangrove ≤45 m from ponds  
+- **Ponds with remnant** = pond pixels ≤45 m from mangrove (pond–mangrove interface)
+
+## Run
+
+```bash
+# data folder (this repo copy, or your OneDrive shrimppond folder)
+DIR=../outputs/agb_stability/shrimppond
+
+python map_remnant_in_shrimpponds.py --clark-dir "$DIR" --year 2022
 ```
 
-Expected zips in that folder (15 you listed):
-
-| Zip |
-|-----|
-| Bangladesh_Landcover_Change_Maps_1999_2014_2018_2020_2022.zip |
-| Cambodia_Landcover_Change_Maps_1999_2014_2018_2020_2022.zip |
-| china_landcover_change_maps_1999_2014_2018_2020_2022.zip |
-| ecuador_landcover_change_maps_1999_2014_2018_2020_2022_2024.zip |
-| elsalvador_landcover_change_maps_1999_2014_2018_2020_2022.zip |
-| honduras_landcover_change_maps_1999_2014_2018_2020_2022.zip |
-| india_landcover_change_maps_1999_2014_2018_2020_2022.zip |
-| indonesia_landcover_change_maps_1999_2014_2018_2020_2022_2024.zip |
-| Malaysia_Landcover_Change_Maps_1999_2014_2018_2020_2022.zip |
-| mexico_landcover_change_maps_1999_2014_2018_2020_2022.zip |
-| myanmar_landcover_change_maps_1999_2014_2018_2020_2022_2024.zip |
-| Philippines_Change_Persistence_Maps_1999_to_2022.zip |
-| SriLanka_Landcover_Change_Maps_1999_2014_2018_2020_2022.zip |
-| thailand_landcover_change_maps_1999_2014_2018_2020_2022_2024.zip |
-| vietnam_landcover_change_maps_1999_2014_2018_2020_2022_2024.zip |
-
-Full Clark set is **17** countries. Brazil + Nicaragua zips:
+Windows:
 
 ```powershell
-# save into the SAME shrimppond folder as your other Clark zips
-python fetch_missing_clark.py --only brazil nicaragua `
-  --clark-dir "C:\Users\Md Mizanur Rahman\OneDrive\Desktop\scripts\outputs\agb_stability\shrimppond"
-```
-
-(Already fetched in-repo under `scripts/outputs/agb_stability/shrimppond/` — Brazil ~319 MB is gitignored; use the fetch script on your PC.)
-
-## Run on your PC
-
-```powershell
-cd <repo>\scripts\remnant_mangrove_shrimppond
-pip install -r requirements.txt
-
 $dir = "C:\Users\Md Mizanur Rahman\OneDrive\Desktop\scripts\outputs\agb_stability\shrimppond"
-
-# confirm zips
-python map_clark_remnant.py --list-only --clark-dir $dir
-
-# all countries → remnant mangrove in aquaculture summary
-python map_clark_remnant.py --all-countries --clark-dir $dir --year 2022
-
-# Chakaria only
-python map_clark_remnant.py --country bangladesh --year 2022 --aoi chakaria --clark-dir $dir
+python map_remnant_in_shrimpponds.py --clark-dir $dir --year 2022
 ```
 
-Zips are extracted once to `$dir\_extracted\`. Output CSV:
+## Clark zip folder
 
-`outputs/clark_countries_remnant_mangrove_in_aquaculture.csv`
-
-## Remnant definition (Clark)
-
-`1` Mangrove · `3` Pond Aquaculture (mutually exclusive pixels)
-
-Remnant = mangrove in a pond-dominated neighborhood (≥30% ponds in ~315 m) and/or mangrove adjacent to ponds.
+`scripts/outputs/agb_stability/shrimppond/` (all 17 country zips).  
+Same path on your PC under Desktop `scripts\outputs\agb_stability\shrimppond`.
