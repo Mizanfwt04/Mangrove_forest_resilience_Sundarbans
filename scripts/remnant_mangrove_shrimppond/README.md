@@ -47,3 +47,15 @@ python map_remnant_in_shrimpponds.py --clark-dir $dir --year 2022
 
 `scripts/outputs/agb_stability/shrimppond/` (all 17 country zips).  
 Same path on your PC under Desktop `scripts\outputs\agb_stability\shrimppond`.
+
+## Country-wise remnant mangrove maps
+
+Folder: `outputs/country_maps/`
+
+- `<Country>_2022_remnant_mangrove_map.png` — one map per country (17)
+- `atlas_remnant_mangrove_all_countries.png` — all countries together
+- `country_remnant_map_index.csv` — area stats
+
+```bash
+python make_country_remnant_maps.py --clark-dir ../outputs/agb_stability/shrimppond --year 2022
+```
