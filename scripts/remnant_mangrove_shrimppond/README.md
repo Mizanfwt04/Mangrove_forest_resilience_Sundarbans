@@ -1,61 +1,76 @@
 # Remnant mangrove in shrimp-pond areas (Clark CGA)
 
-Maps **shrimp-pond landscapes where mangrove still exists as remnants**, using the Clark / Moore coastal landcover collection.
+Maps **mangrove patches enclosed by shrimp ponds** using Clark / Moore coastal landcover (15 m).
 
-## Results (Clark ~2022)
+## Important finding (Chakaria field check)
 
-**All 17 Clark countries** have remnant mangrove in shrimp-pond landscapes.
+Clark **does not map remnant mangrove at your RMSP sites**:
 
-| | Area |
-|--|------|
-| Remnant mangrove (in/near ponds) | **≈ 515,000 ha** |
-| Shrimp ponds within 45 m of mangrove | **≈ 620,000 ha** |
+| Group | Clark class at GPS | Median distance to Clark pond |
+|-------|--------------------|-------------------------------|
+| RMSP (n=10) | **all Other (5)** — never Mangrove | **≈ 5.2 km** |
+| PMSP (n=10) | all Mangrove | — |
+| PMWSP (n=10) | all Mangrove | — |
 
-Largest pond–remnant interfaces: **Indonesia**, **Vietnam**, **Thailand**, **Ecuador**, **Philippines**.
+So national “remnant” layers can only recover what Clark labelled as mangrove inside pond landscapes. True field remnants that Clark called **Other** are missed. See:
 
-| File | Content |
-|------|---------|
-| `outputs/clark_remnant_mangrove_in_shrimpponds.csv` | Country table |
-| `outputs/clark_remnant_shrimppond_bar.png` | Bar chart |
-| `outputs/country_previews/*_remnant_shrimppond.png` | Per-country maps |
-| `outputs/chakaria_clark_remnant_shrimppond.png` | Chakaria close-up |
+- `outputs/country_maps_v3/chakaria_clark_field_site_validation.csv`
+- `outputs/country_maps_v3/chakaria_remnant_v3_map.png`
 
-## What is mapped
+## Remnant definition (v3 — current)
 
-Clark classes (15 m): `1` Mangrove · `3` Pond Aquaculture
+Clark classes are mutually exclusive (`1` Mangrove · `3` Pond), so remnant ≠ pixel overlap.
 
-- **Remnant mangrove** = mangrove with ≥30% ponds nearby (~315 m) **or** mangrove ≤45 m from ponds  
-- **Ponds with remnant** = pond pixels ≤45 m from mangrove (pond–mangrove interface)
+**Remnant** = connected mangrove **patch** with high pond enclosure in a ~150 m ring:
+
+| Rule | Max patch area | Min pond fraction in ring |
+|------|----------------|---------------------------|
+| Small scraps | ≤ 40 ha | ≥ 45% |
+| Strongly enclosed | ≤ 120 ha | ≥ 65% |
+
+This drops Sundarbans / large-forest **edge** that v1 painted as remnant (v1 used “any mangrove ≤45 m from ponds”).
+
+| Version | Idea | Problem |
+|---------|------|---------|
+| v1 | Adjacent to ponds | Forest fringe counted as remnant |
+| v2 | Patches, pond ring ≥30% | Still too loose |
+| **v3** | Patches, pond ring ≥45% / 65% | Current |
+
+## Results (Clark 2022, v3)
+
+All **17** Clark countries have some pond-enclosed mangrove patches. Largest remnant areas: Indonesia, Vietnam, Thailand, Ecuador, Philippines.
+
+Maps: `outputs/country_maps_v3/`
+
+- `<Country>_2022_remnant_mangrove_map.png` — national + ponds-near-remnant + ~25 km hotspot
+- `atlas_remnant_mangrove_all_countries.png`
+- `country_remnant_map_index.csv`
+- `v2_vs_v3_remnant_comparison.csv`
 
 ## Run
 
 ```bash
-# data folder (this repo copy, or your OneDrive shrimppond folder)
-DIR=../outputs/agb_stability/shrimppond
+DIR=../outputs/agb_stability/shrimppond   # or your OneDrive shrimppond folder
 
-python map_remnant_in_shrimpponds.py --clark-dir "$DIR" --year 2022
+python make_country_remnant_maps_v3.py --clark-dir "$DIR" --year 2022
 ```
 
 Windows:
 
 ```powershell
 $dir = "C:\Users\Md Mizanur Rahman\OneDrive\Desktop\scripts\outputs\agb_stability\shrimppond"
-python map_remnant_in_shrimpponds.py --clark-dir $dir --year 2022
+python make_country_remnant_maps_v3.py --clark-dir $dir --year 2022
 ```
+
+Older scripts (`make_country_remnant_maps.py`, `*_v2.py`) kept for comparison only.
 
 ## Clark zip folder
 
-`scripts/outputs/agb_stability/shrimppond/` (all 17 country zips).  
+`scripts/outputs/agb_stability/shrimppond/` (gitignored; too large for GitHub).  
 Same path on your PC under Desktop `scripts\outputs\agb_stability\shrimppond`.
 
-## Country-wise remnant mangrove maps
-
-Folder: `outputs/country_maps/`
-
-- `<Country>_2022_remnant_mangrove_map.png` — one map per country (17)
-- `atlas_remnant_mangrove_all_countries.png` — all countries together
-- `country_remnant_map_index.csv` — area stats
+Fetch missing zips only when needed:
 
 ```bash
-python make_country_remnant_maps.py --clark-dir ../outputs/agb_stability/shrimppond --year 2022
+python fetch_missing_clark.py --out-dir ../outputs/agb_stability/shrimppond
 ```
