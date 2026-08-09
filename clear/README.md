@@ -1,14 +1,19 @@
 # CLEAR — Community Lead Ecological Adaptation & Resilience
 
-Sister platform to **GAINS**, hosted at **https://thegains.org/clear/**
+Sister platform to **GAINS**.
+
+| URL | Role |
+|-----|------|
+| https://clear.thegains.org | Primary (subdomain) |
+| https://thegains.org/clear/ | Mirror on GAINS site |
+
+## Setup
+
+See **[DOMAIN_SETUP.md](./DOMAIN_SETUP.md)** for Namecheap DNS + GitHub Pages steps.
 
 ## Brand
 
-**CLEAR** — Community Lead Ecological Adaptation & Resilience
+**CLEAR** — Community Lead Ecological Adaptation & Resilience  
 
-Community-led climate adaptation and ecological resilience.  
-**GAINS** focuses on GeoAI / monitoring science; CLEAR focuses on community adaptation practice.
-
-## Deploy
-
-Published with the GAINS site from the `gh-pages` branch (`clear/` folder at site root).
+CLEAR centers community-led adaptation and resilience practice.  
+**GAINS** centers GeoAI / monitoring science.
