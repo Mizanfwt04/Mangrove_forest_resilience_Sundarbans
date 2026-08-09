@@ -2,7 +2,7 @@
 
 Public site for **https://thegains.org**
 
-Sister platform: **CLEAR** — Community Led Ecological Adaptation and Resilience  
+Sister platform: **CLEAR** — Community Lead Ecological Adaptation and Resilience  
 → https://thegains.org/clear/
 
 ## Deploy
