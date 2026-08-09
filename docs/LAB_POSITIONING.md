@@ -32,6 +32,14 @@ Technology Fund (ITF).
 
 Not a personal CV page and not a generic AI shop. Theory first; AI and Earth observation scale mechanism for governments, universities, NGOs, and industry.
 
+## Sister platform
+
+**CLEAR** — Community Led Ecological Adaptation and Resilience  
+https://thegains.org/clear/
+
+CLEAR centers community-led adaptation and resilience practice.  
+GAINS centers GeoAI, ecological theory, and monitoring science.
+
 ## Founder & Director
 
 Dr. Md Mizanur Rahman — PolyU · mizanfwt04@gmail.com  
