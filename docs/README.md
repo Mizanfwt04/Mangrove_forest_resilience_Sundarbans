@@ -3,7 +3,8 @@
 Public site for **https://thegains.org**
 
 Sister platform: **CLEAR** — Community Lead Ecological Adaptation & Resilience  
-→ https://thegains.org/clear/
+→ https://clear.thegains.org/ (setup: `docs/clear/DOMAIN_SETUP.md`)  
+→ mirror: https://thegains.org/clear/
 
 ## Deploy
 
