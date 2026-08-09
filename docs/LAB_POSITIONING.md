@@ -34,7 +34,7 @@ Not a personal CV page and not a generic AI shop. Theory first; AI and Earth obs
 
 ## Sister platform
 
-**CLEAR** — Community Led Ecological Adaptation and Resilience  
+**CLEAR** — Community Lead Ecological Adaptation and Resilience  
 https://thegains.org/clear/
 
 CLEAR centers community-led adaptation and resilience practice.  
