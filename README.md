@@ -2,6 +2,9 @@
 
 Public site for **https://thegains.org**
 
+Sister platform: **CLEAR** — Community Led Ecological Adaptation and Resilience  
+→ https://thegains.org/clear/
+
 ## Deploy
 
 GitHub Pages publishes from the `gh-pages` branch (site root). Source of truth for content lives in `docs/` on `main`.

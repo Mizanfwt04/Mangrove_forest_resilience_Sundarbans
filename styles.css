@@ -611,6 +611,10 @@ img {
   letter-spacing: 0.04em;
 }
 
+.footer-meta a {
+  border-bottom: 1px solid rgba(226, 177, 90, 0.5);
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(18px);
