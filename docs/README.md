@@ -6,6 +6,18 @@ Sister platform: **CLEAR** — Community Lead Ecological Adaptation & Resilience
 → https://clear.thegains.org/ (setup: `docs/clear/DOMAIN_SETUP.md`)  
 → mirror: https://thegains.org/clear/
 
+Applied platform: **BLESS** — Bioeconomy, Low-carbon Energy & Sustainable Systems
+
+→ https://bless.thegains.org/ (setup: `docs/bless/DOMAIN_SETUP.md`)
+
+→ mirror: https://thegains.org/bless/
+
+Evidence platform: **TRACE** — Transparent Reporting, Accounting, Carbon & Environmental Verification
+
+→ https://trace.thegains.org/ (setup: `docs/trace/DOMAIN_SETUP.md`)
+
+→ mirror: https://thegains.org/trace/
+
 ## Deploy
 
 GitHub Pages publishes from the `gh-pages` branch (site root). Source of truth for content lives in `docs/` on `main`.
