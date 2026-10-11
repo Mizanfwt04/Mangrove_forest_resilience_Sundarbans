@@ -1,0 +1,13 @@
+data/shrimppond/
+data/*.geojson
+data/*.shp
+data/*.dbf
+data/*.shx
+data/*.prj
+data/*.cpg
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Clark country zips are large — keep local / fetch with fetch_missing_clark.py
+../outputs/agb_stability/shrimppond/*.zip

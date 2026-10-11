@@ -1,0 +1,2 @@
+mangrove_ha,pond_aquaculture_ha,remnant_adj_pond_15m_ha,remnant_adj_pond_45m_ha,remnant_in_pond_matrix_ha,matrix_pond_fraction,has_remnant_in_aquaculture,country,year,source_tif,aoi,label
+451481.08499999996,215808.4575,99.17999999999999,284.445,283.59,0.3,True,Bangladesh,20,/tmp/fake_shrimppond/_extracted/Bangladesh_Landcover_Change_Maps_1999_2014_2018_2020_2022/Bangladesh_Landcover_2022_v1exp.tif,national,Bangladesh_Bangladesh_Landcover_2022_v1exp
