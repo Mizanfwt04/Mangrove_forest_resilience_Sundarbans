@@ -1,0 +1,4 @@
+compound_stress_output/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
