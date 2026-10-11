@@ -20,6 +20,7 @@ This project analyzes the resilience of mangrove forests in the Sundarbans to cy
 - Analyze recovery patterns following disturbance events
 - Map spatial patterns of disturbance frequency and intensity
 - Evaluate resilience metrics across different regions (West, Central, East)
+- Examine how post-humid-heat conditions propagate recurring compound stress under extreme tropical climate (temperature, salinity, sulfide, and precipitation co-stressors)
 
 ## Data Sources
 
@@ -65,6 +66,27 @@ This project analyzes the resilience of mangrove forests in the Sundarbans to cy
   - **Moderately resilient**: kNDVI 0.39-0.49
   - **Low resilient**: kNDVI < 0.39
 
+## Compound Climate Stress Analysis
+
+Tropical mangroves in the Sundarbans face recurring compound stress when humid-heat exposure coincides with salinity, sulfide, and hydrological extremes. The script `compound_stress_analysis.py` uses plot-level field data (`Data_Mangrove_resilience_Sundarbans.xlsx`) to quantify these interactions and their relationship to perturbation frequency (PF), disturbance indices (ADI, WDI), and recovery metrics (λ_AC1, λ_variance).
+
+### Indices
+
+- **Humid-heat index**: Combined z-scored mean annual temperature (MAT) and precipitation (MAP), proxying sustained humid tropical heat.
+- **Compound stress index**: Humid heat + salinity + sulfide + drought risk (inverse MAP).
+- **Recurring stress score**: Perturbation frequency combined with recovery-rate metrics, capturing propagation of repeated stress.
+
+### Run
+
+```bash
+pip install pandas openpyxl matplotlib scipy
+python compound_stress_analysis.py --output-dir compound_stress_output
+```
+
+Outputs:
+- `compound_stress_output/compound_stress_propagation.png` — four-panel figure
+- `compound_stress_output/compound_stress_correlations.csv` — predictor–outcome correlations
+
 ## Code Structure
 
 ### Main Notebook: `Figs_resilience03022026.ipynb`
@@ -100,6 +122,7 @@ cartopy
 scipy
 numpy
 pandas
+openpyxl
 ```
 
 ## Installation
