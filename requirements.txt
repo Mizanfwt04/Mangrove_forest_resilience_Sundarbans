@@ -1,0 +1,28 @@
+# Python dependencies for the Mangrove Forest Resilience analysis notebook.
+# Install with:  python3 -m pip install -r requirements.txt
+# (add --break-system-packages on Debian/Ubuntu PEP 668 environments)
+
+# Core scientific stack
+numpy
+pandas
+scipy
+matplotlib
+
+# Modeling / stats
+statsmodels
+scikit-learn
+
+# Geospatial
+rasterio
+geopandas
+shapely
+cartopy
+matplotlib-scalebar
+
+# Data I/O
+openpyxl
+
+# Notebook tooling (to run Figs_resilience03022026.ipynb)
+jupyter
+nbconvert
+ipykernel
