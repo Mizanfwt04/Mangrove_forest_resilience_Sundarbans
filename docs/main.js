@@ -1,45 +1,62 @@
+/* Progressive enhancement: navigation, publication filters and diagram viewer. */
 (() => {
-  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  const revealTargets = document.querySelectorAll(
-    ".section h2, .section-copy, .about-grid article, .policy-align, .policy-list li, .program-list li, .lab-figure, .pub-group, .lead-profile, .timeline li, .lead-stats div, .lead-highlights li, .service-list li, .pathway-grid article, .contact .btn"
-  );
-
-  revealTargets.forEach((el) => el.classList.add("reveal"));
-
-  if (prefersReduced || !("IntersectionObserver" in window)) {
-    revealTargets.forEach((el) => el.classList.add("is-visible"));
-    return;
+  'use strict';
+  document.documentElement.classList.add('js');
+  const menuButton = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('#site-nav');
+  if (menuButton && menu) {
+    menuButton.hidden = false;
+    const closeMenu = () => {
+      menu.classList.remove('is-open');
+      menuButton.setAttribute('aria-expanded', 'false');
+    };
+    menuButton.addEventListener('click', () => {
+      const open = menuButton.getAttribute('aria-expanded') !== 'true';
+      menuButton.setAttribute('aria-expanded', String(open));
+      menu.classList.toggle('is-open', open);
+    });
+    menu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && menu.classList.contains('is-open')) {
+        closeMenu();
+        menuButton.focus();
+      }
+    });
+    window.matchMedia('(min-width: 801px)').addEventListener('change', closeMenu);
   }
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
+  const controls = document.querySelector('.publication-controls');
+  if (controls) {
+    controls.hidden = false;
+    const papers = [...document.querySelectorAll('.publication')];
+    const buttons = [...controls.querySelectorAll('[data-filter]')];
+    const count = document.querySelector('#publication-count');
+    buttons.forEach(button => button.addEventListener('click', () => {
+      const topic = button.dataset.filter;
+      let visible = 0;
+      papers.forEach(paper => {
+        const show = topic === 'all' || paper.dataset.topics.split(' ').includes(topic);
+        paper.hidden = !show;
+        if (show) visible++;
       });
-    },
-    { threshold: 0.15, rootMargin: "0px 0px -8% 0px" }
-  );
-
-  revealTargets.forEach((el) => observer.observe(el));
-
-  const coast = document.querySelector(".atmosphere__coast");
-  if (!coast) return;
-
-  let ticking = false;
-  window.addEventListener(
-    "scroll",
-    () => {
-      if (ticking) return;
-      ticking = true;
-      window.requestAnimationFrame(() => {
-        const offset = Math.min(window.scrollY * 0.08, 48);
-        coast.style.transform = `translateY(${offset}px)`;
-        ticking = false;
+      buttons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+      count.textContent = `${visible} selected publication${visible === 1 ? '' : 's'}`;
+    }));
+  }
+  const dialog = document.querySelector('.framework-dialog');
+  if (dialog && typeof dialog.showModal === 'function') {
+    document.querySelectorAll('[data-framework-open]').forEach(link => {
+      link.addEventListener('click', event => {
+        event.preventDefault();
+        dialog.showModal();
+        document.body.classList.add('dialog-open');
       });
-    },
-    { passive: true }
-  );
+    });
+    dialog.querySelector('[data-framework-close]').addEventListener('click', () => dialog.close());
+    dialog.addEventListener('click', event => {
+      if (event.target !== dialog) return;
+      const bounds = dialog.getBoundingClientRect();
+      if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) dialog.close();
+    });
+    dialog.addEventListener('close', () => document.body.classList.remove('dialog-open'));
+  }
 })();
