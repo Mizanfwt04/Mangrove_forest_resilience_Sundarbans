@@ -1,600 +1,290 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>GAINS — Global Artificial Intelligence and Nature Solutions</title>
-    <meta
-      name="description"
-      content="GAINS advances AI-powered nature solutions — forest carbon, climate change, extreme climate, ecosystem resilience, tipping points, biodiversity, GeoAI, and remote sensing for a carbon-neutral future."
-    />
-    <link rel="canonical" href="https://thegains.org/" />
-    <meta property="og:title" content="GAINS — Global Artificial Intelligence and Nature Solutions" />
-    <meta
-      property="og:description"
-      content="AI-powered nature solutions for forest carbon, climate extremes, resilience, tipping points, biodiversity, and Net Zero."
-    />
-    <meta property="og:url" content="https://thegains.org/" />
-    <meta property="og:type" content="website" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Sora:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <div class="atmosphere" aria-hidden="true">
-      <div class="atmosphere__glow"></div>
-      <div class="atmosphere__grid"></div>
-      <svg class="atmosphere__coast" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
-        <defs>
-          <linearGradient id="coastFill" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#0b3d3a" stop-opacity="0.55" />
-            <stop offset="55%" stop-color="#145c52" stop-opacity="0.35" />
-            <stop offset="100%" stop-color="#1f7a68" stop-opacity="0.15" />
-          </linearGradient>
-        </defs>
-        <path
-          class="coast-path"
-          d="M0,540 C180,480 260,620 420,560 C580,500 640,380 820,420 C1000,460 1120,560 1440,480 L1440,900 L0,900 Z"
-          fill="url(#coastFill)"
-        />
-        <path
-          class="coast-line"
-          d="M0,540 C180,480 260,620 420,560 C580,500 640,380 820,420 C1000,460 1120,560 1440,480"
-          fill="none"
-          stroke="#9fd6c4"
-          stroke-opacity="0.45"
-          stroke-width="1.5"
-        />
-      </svg>
-    </div>
-
-    <header class="site-header">
-      <a class="brand-mark" href="#top" aria-label="GAINS home">GAINS</a>
-      <nav class="site-nav" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#director">Director</a>
-        <a href="./clear/">CLEAR</a>
-        <a href="./bless/">BLESS</a>
-        <a href="./trace/">TRACE</a>
-        <a href="#collaborate" class="nav-cta">Collaborate</a>
-      </nav>
-    </header>
-
-    <main id="top">
-      <section class="hero">
-        <p class="brand-hero">GAINS</p>
-        <h1>Global Artificial Intelligence and Nature Solutions</h1>
-        <p class="lede">
-          Advancing AI-powered nature solutions for a carbon-neutral future —
-          forest carbon, climate change, extreme climate events, ecosystem
-          resilience, tipping points, biodiversity, and GeoAI at landscape to
-          jurisdictional scales.
-        </p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="#research">Research</a>
-          <a class="btn btn-ghost" href="#publications">Publications</a>
-          <a class="btn btn-ghost" href="#collaborate">Collaborate</a>
-        </div>
-      </section>
-
-      <section class="section about" id="about">
-        <p class="section-kicker">About GAINS</p>
-        <h2>An institute for AI-driven Earth system science</h2>
-        <p class="section-copy">
-          GAINS — Global Artificial Intelligence and Nature Solutions — builds
-          scientific tools and decision support for governments, universities,
-          NGOs, and industry. We treat AI and Earth observation as instruments to
-          test and scale ecological theory, not as a substitute for mechanism.
-        </p>
-        <div class="about-grid">
-          <article>
-            <h3>Mission</h3>
-            <p>
-              Scale ecological theory with GeoAI and structural equation modeling
-              to sustain forest carbon and biodiversity under climate change —
-              including resilience to extremes, early warning of tipping points,
-              JREDD+, Net Zero, and nature-based solutions.
-            </p>
-          </article>
-          <article>
-            <h3>Vision</h3>
-            <p>
-              An international research institute bridging field ecology,
-              multi-sensor remote sensing, and AI for transparent carbon MRV,
-              climate-risk assessment, restoration design, and early warning of
-              ecosystem tipping points.
-            </p>
-          </article>
-          <article>
-            <h3>Core values</h3>
-            <p>
-              Theory first. Evidence over black boxes. Open methods where possible.
-              Partnerships that serve climate adaptation, resilience, and
-              biodiversity priorities.
-            </p>
-          </article>
-          <article>
-            <h3>Scope</h3>
-            <p>
-              Tropical forests, mangroves, urban greenspace, agroforestry,
-              agricultural production, and coastal systems under intensifying
-              climate extremes — with methods that transfer across tropical and
-              subtropical landscapes.
-            </p>
-          </article>
-        </div>
-
-        <div class="policy-align" id="policy">
-          <h3>Policy alignment</h3>
-          <p>
-            GAINS research is aligned with — not a substitute for — major
-            international agendas for climate and biodiversity action.
-          </p>
-          <ul class="policy-list">
-            <li>
-              <strong>SDG 13</strong> — Climate Action
-              <span>Extremes, resilience, tipping points, Net Zero, nature-based solutions</span>
-            </li>
-            <li>
-              <strong>SDG 14</strong> — Life Below Water
-              <span>Mangroves, blue carbon, and coastal systems</span>
-            </li>
-            <li>
-              <strong>SDG 15</strong> — Life on Land
-              <span>Tropical forests, biodiversity–ecosystem functioning, restoration</span>
-            </li>
-            <li>
-              <strong>GBF Target 2</strong>
-              <span>Ecosystem restoration and trait-based recovery design</span>
-            </li>
-            <li>
-              <strong>GBF Target 3</strong>
-              <span>Conservation co-benefits for biodiversity and carbon</span>
-            </li>
-            <li>
-              <strong>GBF Target 8</strong>
-              <span>Minimize climate impacts on biodiversity; early warning of tipping risk</span>
-            </li>
-            <li>
-              <strong>GBF Target 11</strong>
-              <span>Nature’s contributions to people — multifunctionality and carbon services</span>
-            </li>
-            <li>
-              <strong>GBF Target 21</strong>
-              <span>Science, data, and GeoAI for decision-ready biodiversity and carbon knowledge</span>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="section research" id="research">
-        <p class="section-kicker">Research programs</p>
-        <h2>Seven themes that define GAINS</h2>
-        <p class="section-copy">
-          Organized research programs spanning forest carbon, climate extremes and
-          tipping points, biodiversity, AI for Earth, remote sensing, digital
-          twin forests, and climate-smart agriculture.
-        </p>
-        <ol class="program-list">
-          <li>
-            <span class="program-index">01</span>
-            <div>
-              <h3>Forest Carbon &amp; Climate Change</h3>
-              <p>
-                Carbon accounting, sequestration, carbon stability under a changing
-                climate, MRV, JREDD+, and Net Zero pathways for forests and blue
-                carbon — including contributions to global mangrove soil-carbon
-                mapping collaborations.
-              </p>
-            </div>
-          </li>
-          <li>
-            <span class="program-index">02</span>
-            <div>
-              <h3>Climate Extremes, Resilience &amp; Tipping Points</h3>
-              <p>
-                Cyclones, heat, drought, salinity, and compound extremes; recovery
-                trajectories; critical slowing down (CSD); long-term vegetation
-                signals (e.g. kNDVI); and early warning of ecological tipping points.
-              </p>
-            </div>
-          </li>
-          <li>
-            <span class="program-index">03</span>
-            <div>
-              <h3>Biodiversity &amp; Ecosystem Functioning</h3>
-              <p>
-                Functional composition, multifunctionality, structural diversity,
-                and ecological modeling with SEM — how biodiversity sustains
-                function under climate stress.
-              </p>
-            </div>
-          </li>
-          <li>
-            <span class="program-index">04</span>
-            <div>
-              <h3>AI for Earth</h3>
-              <p>
-                Machine learning, deep learning, GeoAI, foundation models, and
-                explainable AI for monitoring, resilience forecasting, and decision
-                support.
-              </p>
-            </div>
-          </li>
-          <li>
-            <span class="program-index">05</span>
-            <div>
-              <h3>Remote Sensing</h3>
-              <p>
-                Satellite, drone, TLS/LiDAR, hyperspectral, radar, GEDI, Planet,
-                and MODIS — fused for multi-scale observation of change, extremes,
-                and recovery.
-              </p>
-            </div>
-          </li>
-          <li>
-            <span class="program-index">06</span>
-            <div>
-              <h3>Digital Twin Forests</h3>
-              <p>
-                Living digital representations of stand structure, carbon,
-                resilience, and tipping risk — linking plots, UAV/LiDAR, and
-                satellite time series.
-              </p>
-            </div>
-          </li>
-          <li>
-            <span class="program-index">07</span>
-            <div>
-              <h3>Climate-Smart Agriculture &amp; Precision Production</h3>
-              <p>
-                Climate-risk assessment and crop-yield forecasting using Earth
-                observation, field data, and GeoAI; precision irrigation,
-                nutrient, and crop-stress management for resilient, resource-
-                efficient, and sustainable agricultural production.
-              </p>
-            </div>
-          </li>
-        </ol>
-      </section>
-
-      <section class="section profile-visual" id="profile">
-        <p class="section-kicker">Institute profile</p>
-        <h2>How we monitor, analyze, and act</h2>
-        <p class="section-copy">
-          Multi-scale monitoring, GeoAI analysis, and application pillars —
-          including forest carbon, climate resilience, ecological tipping points,
-          and precision agriculture across urban, tropical, coastal,
-          agroforestry, and agricultural landscapes.
-        </p>
-        <figure class="lab-figure">
-          <img
-            src="./assets/gains_lab_profile.png"
-            alt="GAINS institute profile — multi-scale monitoring pyramid, ecosystem landscape, GeoAI toolkit, and research pillars"
-            width="1536"
-            height="1024"
-            loading="lazy"
-          />
-        </figure>
-      </section>
-
-      <section class="section publications" id="publications">
-        <p class="section-kicker">Publications</p>
-        <h2>Evidence in leading venues</h2>
-        <p class="section-copy">
-          Selected papers by venue. Full list on Google Scholar (1,550 citations;
-          h-index 14; i10-index 19 — as of September 2026).
-        </p>
-
-        <div class="pub-groups">
-          <div class="pub-group">
-            <h3>Nature Portfolio</h3>
-            <ul class="resource-list">
-              <li>
-                <a href="https://doi.org/10.1038/s41467-021-24207-4">
-                  Rahman et al. (2021) — Co-benefits of protecting mangroves for
-                  biodiversity conservation and carbon storage
-                  <span>Nature Communications</span>
-                </a>
-              </li>
-              <li>
-                <a href="./assets/Rahman_et_al_Forest_carbon_biodiversity_resilience_GEOAI.pdf">
-                  Rahman et al. (2026) — Functional composition and structural
-                  diversity enhance mangrove forest resilience in the Sundarbans
-                  <span>Communications Earth &amp; Environment · PDF</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="pub-group">
-            <h3>Global Change Biology</h3>
-            <ul class="resource-list">
-              <li>
-                <a href="https://doi.org/10.1111/gcb.17152">
-                  Rahman et al. (2024) — Functional composition outweighs taxonomic
-                  and functional diversity in maintaining ecosystem properties and
-                  processes
-                  <span>Global Change Biology</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="pub-group">
-            <h3>Environmental Research Letters · Global mangrove carbon</h3>
-            <ul class="resource-list">
-              <li>
-                <a href="https://doi.org/10.1088/1748-9326/aabe1c">
-                  Sanderman et al. (2018) — A global map of mangrove forest soil
-                  carbon at 30 m spatial resolution
-                  <span>
-                    Environmental Research Letters · International collaborative
-                    synthesis (co-author)
-                  </span>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="pub-group">
-            <h3>Remote Sensing &amp; Earth Observation</h3>
-            <ul class="resource-list">
-              <li>
-                <a href="https://doi.org/10.3390/rs12091375">
-                  Rahman et al. (2020) — Remote sensing-based mapping of senescent
-                  leaf C:N ratio using machine learning
-                  <span>Remote Sensing</span>
-                </a>
-              </li>
-              <li>
-                <a href="https://doi.org/10.1002/rse2.105">
-                  Rahman et al. (2019) — WorldView-2 and TanDEM-X mangrove
-                  assessment
-                  <span>Remote Sensing in Ecology and Conservation</span>
-                </a>
-              </li>
-              <li>
-                <a href="https://doi.org/10.1016/j.jag.2026.105282">
-                  Cao, Mohammad, Rahman &amp; Weng (2026) — Soil hydrothermal
-                  properties and phenology in cropland
-                  <span>Int. J. Applied Earth Observation and Geoinformation</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="pub-group">
-            <h3>In preparation</h3>
-            <ul class="resource-list plain-list">
-              <li>
-                Tropical forest carbon stability under compound climate extremes
-                <span>In preparation</span>
-              </li>
-              <li>
-                Aquasilviculture must restore structural and ecological attributes
-                of mangroves
-                <span>Letter · in preparation</span>
-              </li>
-              <li>
-                Agroforestry as a nature-based climate solution in the Indo-Gangetic Plain
-                <span>In preparation</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <p class="section-note">
-          <a href="https://scholar.google.com/citations?user=0Ux4Z3YAAAAJ&amp;hl=en">Google Scholar</a>
-          ·
-          <a href="./assets/CV_Rahman.pdf">Full CV (PDF)</a>
-        </p>
-      </section>
-
-      <section class="section director" id="director">
-        <p class="section-kicker">Founder &amp; Director</p>
-        <h2>Dr. Md Mizanur Rahman</h2>
-        <p class="section-copy lead-role">
-          Founder &amp; Director, GAINS · Research Fellow, Remote Sensing Laboratory,
-          The Hong Kong Polytechnic University
-        </p>
-        <p class="section-copy">
-          Forest ecologist with a decade of experience across Kyoto University,
-          NASA Goddard Space Flight Center, The University of Hong Kong, Jiangmen
-          Laboratory of Carbon Science and Technology (HKUST Guangzhou), and The
-          Hong Kong Polytechnic University. His work integrates field ecology,
-          UAV/LiDAR, satellite remote sensing, GeoAI, machine learning, and
-          structural equation modeling to understand forest carbon, climate
-          extremes, ecosystem resilience, and tipping points — with 20+
-          peer-reviewed articles (1,550 citations; h-index 14; i10-index 19,
-          Google Scholar, September 2026) in Nature
-          Communications, Global Change Biology, and Communications Earth &amp;
-          Environment.
-        </p>
-
-        <div class="lead-profile">
-          <div class="lead-profile__intro">
-            <h3>Research interests</h3>
-            <ul class="lead-profile__tags" aria-label="Research interests">
-              <li>Climate change &amp; extreme climate</li>
-              <li>Ecosystem resilience</li>
-              <li>Ecological tipping points &amp; CSD</li>
-              <li>Forest carbon &amp; blue carbon</li>
-              <li>Biodiversity–ecosystem functioning</li>
-              <li>Structural equation modeling</li>
-              <li>GeoAI &amp; Earth observation</li>
-              <li>JREDD+ &amp; carbon MRV</li>
-              <li>Nature-based solutions</li>
-              <li>Digital twin forests</li>
-            </ul>
-
-            <h3>Selected experience</h3>
-            <ul class="timeline">
-              <li>
-                <strong>Research Fellow</strong> — PolyU Remote Sensing Laboratory
-                <span>2026–present · Blue carbon, Net Zero trees, campus carbon offsetting</span>
-              </li>
-              <li>
-                <strong>Research Fellow</strong> — JC STEM Lab of Earth Observations &amp; RCAIG, PolyU
-                <span>2024–2026 · RTH ITF Fellow · Mangrove resilience, climate extremes, UAV/TLS, GeoAI</span>
-              </li>
-              <li>
-                <strong>Assistant Researcher</strong> — Jiangmen Lab / HKUST Guangzhou
-                <span>2023–2024 · Carbon accounting &amp; nature-based offsets</span>
-              </li>
-              <li>
-                <strong>RGC Postdoctoral Fellow</strong> — The University of Hong Kong
-                <span>2022–2023 · Sentinel–GEDI–TanDEM-X fusion</span>
-              </li>
-              <li>
-                <strong>NASA Visiting Fellow</strong> — Goddard Space Flight Center
-                <span>2016 · Canopy height &amp; 3-D vegetation mapping</span>
-              </li>
-              <li>
-                <strong>Ph.D.</strong> — Kyoto University
-                <span>2019 · Forest and Biomaterials Science</span>
-              </li>
-            </ul>
-
-            <div class="lead-profile__actions">
-              <a class="btn btn-primary" href="./assets/CV_Rahman.pdf">Download CV</a>
-              <a
-                class="btn btn-ghost"
-                href="https://scholar.google.com/citations?user=0Ux4Z3YAAAAJ&amp;hl=en"
-              >
-                Google Scholar
-              </a>
-              <a class="btn btn-ghost" href="mailto:mizanfwt04@gmail.com">Email</a>
-            </div>
-          </div>
-
-          <aside class="lead-profile__aside" aria-label="Director metrics">
-            <dl class="lead-stats">
-              <div>
-                <dt>Citations</dt>
-                <dd>1,550</dd>
-              </div>
-              <div>
-                <dt>h-index</dt>
-                <dd>14</dd>
-              </div>
-              <div>
-                <dt>i10-index</dt>
-                <dd>19</dd>
-              </div>
-              <div>
-                <dt>Papers</dt>
-                <dd>20+</dd>
-              </div>
-            </dl>
-            <p class="metrics-note">Google Scholar · September 2026</p>
-            <ul class="lead-highlights">
-              <li>
-                <strong>Global collaboration</strong>
-                Co-author, Environmental Research Letters global mangrove soil
-                carbon mapping (Sanderman et al., 2018)
-              </li>
-              <li>
-                <strong>Training</strong>
-                Workshops for forest departments, SAARC carbon stocks training,
-                GEE, LiDAR, and UAV flight certification
-              </li>
-              <li>
-                <strong>Mentorship</strong>
-                13+ students assisted; supporting postdocs and PhD researchers at PolyU
-              </li>
-              <li>
-                <strong>Contact</strong>
-                Hong Kong SAR · mizanfwt04@gmail.com · +852 5680 0035
-              </li>
-            </ul>
-          </aside>
-        </div>
-      </section>
-
-      <section class="section services" id="services">
-        <p class="section-kicker">Capabilities</p>
-        <h2>Where we can contribute</h2>
-        <p class="section-copy">
-          Areas of scientific expertise for future partnerships — not a
-          commercial service catalog. Engagement depends on collaboration,
-          institutional approval, and funding.
-        </p>
-        <ul class="service-list">
-          <li>Carbon accounting and MRV</li>
-          <li>Climate-risk, extremes &amp; resilience assessment</li>
-          <li>Tipping-point &amp; early-warning analysis</li>
-          <li>Forest inventory &amp; biodiversity assessment</li>
-          <li>UAV and LiDAR surveys</li>
-          <li>Satellite mapping &amp; Google Earth Engine</li>
-          <li>AI / GeoAI modeling</li>
-          <li>Restoration planning under climate change</li>
-          <li>Carbon credit project science support</li>
-          <li>Training and capacity building</li>
-        </ul>
-      </section>
-
-      <section class="section pathways" id="collaborate">
-        <p class="section-kicker">Engage</p>
-        <h2>Collaborate with GAINS</h2>
-        <p class="section-copy">
-          Pathways we aim to open as the institute grows — enquire by email;
-          nothing below is an open call or guaranteed program yet.
-        </p>
-        <div class="pathway-grid">
-          <article>
-            <h3>Partners</h3>
-            <p>
-              Seeking collaborations with universities, agencies, NGOs, industry,
-              and international organizations.
-            </p>
-          </article>
-          <article>
-            <h3>Training</h3>
-            <p>Coming soon.</p>
-          </article>
-          <article>
-            <h3>Careers</h3>
-            <p>Coming soon.</p>
-          </article>
-          <article>
-            <h3>Coming next</h3>
-            <p>
-              Data portal, open GEE/Python tools, and interactive carbon &amp;
-              resilience calculators — roadmap only.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section contact" id="contact">
-        <p class="section-kicker">Contact</p>
-        <h2>Start a collaboration</h2>
-        <p class="section-copy">
-          Research partnerships on climate extremes, resilience, tipping points,
-          forest carbon, GeoAI, MRV, training, and institute development — get in
-          touch.
-        </p>
-        <a class="btn btn-primary" href="mailto:mizanfwt04@gmail.com">Email GAINS</a>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <p><strong>GAINS</strong> · Global Artificial Intelligence and Nature Solutions</p>
-      <p class="footer-meta">
-        <a href="./clear/">CLEAR</a>
-        · <a href="./bless/">BLESS</a>
-        · <a href="./trace/">TRACE</a>
-        · thegains.org · Theory · SEM · GeoAI · Nature Solutions
-      </p>
-    </footer>
-
-    <script src="./main.js"></script>
-  </body>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GAINS | Geospatial AI, Biodiversity &amp; Forest Resilience</title>
+<meta name="description" content="GAINS connects forest ecology, biodiversity, tree physiology and geospatial AI to understand carbon, phenology and resilience from individual trees to global landscapes.">
+<meta name="theme-color" content="#173f35">
+<link rel="canonical" href="https://thegains.org/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="GAINS | Geospatial AI, Biodiversity &amp; Forest Resilience">
+<meta property="og:description" content="GAINS connects forest ecology, biodiversity, tree physiology and geospatial AI to understand carbon, phenology and resilience from individual trees to global landscapes.">
+<meta property="og:url" content="https://thegains.org/">
+<meta property="og:image" content="https://thegains.org/assets/gains-research-framework.webp">
+<meta property="og:image:alt" content="GAINS framework connecting biodiversity, tree physiology, forest carbon, IoT and geospatial AI.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600&amp;family=Sora:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+<script src="./main.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="header-inner wrap">
+<a class="brand" href="./" aria-label="GAINS home"><span class="brand-mark" aria-hidden="true">G<span>↗</span></span><span>GAINS<small>Science for living landscapes</small></span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>Menu <span aria-hidden="true">☰</span></button><nav id="site-nav" class="site-nav" aria-label="Main navigation"><a href="#about">About</a><a href="#research">Research</a><a href="#publications">Publications</a><a href="#director">People</a><a class="nav-contact" href="#collaborate">Connect <span aria-hidden="true">↗</span></a></nav>
+</div></header>
+<main id="main">
+<section class="hero"><div class="hero-grid wrap">
+<div class="hero-copy">
+<p class="eyebrow light">Global Artificial Intelligence and Nature Solutions</p>
+<h1>From living trees to <em>resilient landscapes.</em>
+</h1>
+<p class="hero-description">Connecting biodiversity, tree physiology and forest carbon through field ecology, Earth observation and geospatial AI.</p>
+<div class="hero-actions">
+<a class="button button-light" href="#research">Explore our research <span aria-hidden="true">↓</span></a><a class="text-link light-link" href="#publications">Read the science <span aria-hidden="true">↗</span></a>
+</div>
+<p class="hero-signature">Geospatial AI in Nature Services Lab<br><span>An independent research vision led by Dr. Md Mizanur Rahman</span></p>
+</div>
+<figure class="hero-figure"><a class="framework-link" href="./assets/gains-research-framework.webp" data-framework-open aria-label="Open the full research framework diagram"><img src="./assets/gains-research-framework.webp" width="1536" height="1024" fetchpriority="high" alt="Research framework: field plots, IoT and TreeTalker, drones, LiDAR, and satellites including GEDI connect tree physiology, functional diversity and forest structure to GeoAI and ecological digital twins. Applications include biodiversity, forest carbon, JREDD+, climate resilience and ecological tipping points."><span class="expand-label">View full framework <span aria-hidden="true">↗</span></span></a><figcaption><span class="figure-index">01 / THE RESEARCH VISION</span><span>From tree-level processes to landscape-scale decisions.</span></figcaption></figure>
+</div>
+<div class="landscape-strip"><div class="wrap">
+<span>Across living landscapes</span><p>Natural forests <i>·</i> Urban forests <i>·</i> Mangroves <i>·</i> Agroforestry &amp; agriculture</p>
+</div></div></section>
+<section class="section wrap" id="about"><div class="intro-grid">
+<div>
+<p class="eyebrow">The questions that connect us</p>
+<h2>What helps a forest thrive—and keep thriving?</h2>
+</div>
+<div class="intro-copy">
+<p class="large-copy">Which species and traits sustain ecosystem function? How do trees respond to heat, drought and salinity? And when does a carbon-rich forest become a vulnerable one?</p>
+<p>GAINS brings these questions together. The programme builds on research in biodiversity, forest structure and carbon storage, and extends toward continuous tree monitoring and ecological forecasting. Ecological questions guide the technology, from field plots to satellites.</p>
+<a class="text-link" href="#director">Meet the founder <span aria-hidden="true">↗</span></a>
+</div>
+</div>
+<div class="research-lens" aria-label="Connected ecological priorities">
+<span>Biodiversity &amp; function</span><span>Physiology &amp; phenology</span><span>Carbon &amp; growth</span><span>Resilience &amp; recovery</span>
+</div></section>
+<section class="section section-tint" id="research"><div class="wrap">
+<div class="section-heading">
+<div>
+<p class="eyebrow">Research directions</p>
+<h2>Ecology at the centre.<br>Connected across scales.</h2>
+</div>
+<p>Six connected directions, grounded in published research and extending into new sensing and modelling approaches.</p>
+</div>
+<div class="theme-grid">
+<article class="theme-card"><div class="card-top">
+<span class="card-number">01</span><span class="theme-type">Species → function</span>
+</div>
+<h3>Biodiversity &amp; ecosystem function</h3>
+<p>Link species diversity, functional traits, dominant trait composition and forest structure to productivity, carbon storage and ecosystem multifunctionality.</p>
+<a class="text-link" href="#publications">Explore the evidence <span aria-hidden="true">↗</span></a></article>
+<article class="theme-card"><div class="card-top">
+<span class="card-number">02</span><span class="theme-type">Trees → time series</span>
+</div>
+<h3>Tree physiology, IoT &amp; phenology</h3>
+<p>Develop TreeTalker and complementary sensor networks to connect tree water use, growth and microclimate with seasonal phenology and responses to environmental stress.</p>
+<span class="card-note">Monitoring programme in development</span></article>
+<article class="theme-card"><div class="card-top">
+<span class="card-number">03</span><span class="theme-type">Stocks → persistence</span>
+</div>
+<h3>Forest carbon &amp; blue carbon</h3>
+<p>Move from measuring carbon stocks to understanding their persistence. Connect biomass, sediment carbon, stand structure and disturbance across forests and mangroves.</p>
+<a class="text-link" href="#publications">Explore the evidence <span aria-hidden="true">↗</span></a></article>
+<article class="theme-card"><div class="card-top">
+<span class="card-number">04</span><span class="theme-type">Stress → recovery</span>
+</div>
+<h3>Resilience &amp; ecological tipping points</h3>
+<p>Investigate resistance and recovery under drought, heat, cyclones and salinity. Test potential early-warning signals against observed ecosystem change.</p>
+<a class="text-link" href="#current-work">See current directions <span aria-hidden="true">↗</span></a></article>
+<article class="theme-card"><div class="card-top">
+<span class="card-number">05</span><span class="theme-type">Observations → forecasts</span>
+</div>
+<h3>GeoAI &amp; ecological digital twins</h3>
+<p>Integrate field data, drones, LiDAR, GEDI and satellite time series with machine learning and ecological knowledge to map change and develop testable forecasts.</p>
+<span class="card-note">Digital-twin research in development</span></article>
+<article class="theme-card"><div class="card-top">
+<span class="card-number">06</span><span class="theme-type">Evidence → stewardship</span>
+</div>
+<h3>Restoration &amp; climate-ready landscapes</h3>
+<p>Translate ecological understanding into mangrove restoration, urban forestry, agroforestry and agricultural monitoring that support biodiversity, carbon and livelihoods.</p>
+<a class="text-link" href="#platforms">Connect science and practice <span aria-hidden="true">↗</span></a></article>
+</div>
+</div></section>
+<section class="section wrap" id="profile"><div class="section-heading">
+<div>
+<p class="eyebrow">The research framework</p>
+<h2>Many ways to observe.<br>One connected understanding.</h2>
+</div>
+<p>Linking measurements at different scales helps explain how tree-level processes shape forest function—and where predictions need stronger evidence.</p>
+</div>
+<div class="workflow">
+<article><span class="step-number">01 / OBSERVE</span><h3>Listen to living trees</h3>
+<p>Field plots, species inventories, functional traits and proposed IoT / TreeTalker measurements of physiology, growth and microclimate.</p></article>
+<article><span class="step-number">02 / MAP</span><h3>See the whole landscape</h3>
+<p>Drones, terrestrial and airborne LiDAR, GEDI and satellite imagery connect canopy structure and phenology across spatial scales.</p></article>
+<article><span class="step-number">03 / UNDERSTAND</span><h3>Explain and forecast</h3>
+<p>GeoAI, time-series analysis and ecological models connect patterns to processes, with field validation and explicit uncertainty.</p></article>
+<article><span class="step-number">04 / APPLY</span><h3>Support better decisions</h3>
+<p>Evidence for biodiversity conservation, carbon monitoring, restoration and adaptation in natural, urban and agricultural landscapes.</p></article>
+</div>
+<div class="framework-note">
+<p><strong>The goal:</strong> ecological digital twins that can be updated with new observations and used to compare management and climate scenarios.</p>
+<a class="text-link" href="./assets/gains-research-framework.webp" data-framework-open>Open the diagram <span aria-hidden="true">↗</span></a>
+</div></section>
+<section class="section section-dark" id="current-work"><div class="wrap">
+<div class="section-heading">
+<div>
+<p class="eyebrow light">The next questions</p>
+<h2>A growing research agenda.</h2>
+</div>
+<p>Current research and proposals connect local observations with questions of global ecological importance.</p>
+</div>
+<div class="project-grid">
+<article><span class="status">Research in progress</span><h3>Forest carbon stability under climate extremes</h3>
+<p>Investigating how biodiversity, forest structure and compound climate stress shape the persistence of tropical forest carbon.</p>
+<span class="project-place">Pantropical forests</span></article>
+<article><span class="status">Proposal in development</span><h3>A biodiversity &amp; phenology observatory</h3>
+<p>Connecting tree physiology, seasonal growth and phenology with terrestrial, pollinator and aquatic biodiversity through field observations, sensors and remote sensing.</p>
+<span class="project-place">Hong Kong · transferable methods</span></article>
+<article><span class="status">Research &amp; proposal development</span><h3>Mangrove carbon, restoration &amp; coastal pressures</h3>
+<p>Studying sediment carbon and developing work on coastal pollution and remnant-first restoration, with ecological function and resilience as central outcomes.</p>
+<span class="project-place">Hong Kong &amp; tropical coasts</span></article>
+</div>
+</div></section>
+<section class="section wrap" id="publications"><div class="section-heading">
+<div>
+<p class="eyebrow">Selected publications</p>
+<h2>A foundation in evidence.</h2>
+</div>
+<p>Research by Dr. Rahman and collaborators, spanning biodiversity, carbon, resilience and ecological remote sensing.</p>
+</div>
+<div class="publication-controls" hidden>
+<div class="filter-group" role="group" aria-label="Filter publications">
+<button class="filter-button" data-filter="all" aria-pressed="true">All research</button><button class="filter-button" data-filter="biodiversity" aria-pressed="false">Biodiversity &amp; carbon</button><button class="filter-button" data-filter="resilience" aria-pressed="false">Resilience</button><button class="filter-button" data-filter="sensing" aria-pressed="false">Sensing &amp; phenology</button>
+</div>
+<p id="publication-count" class="result-count" aria-live="polite">8 selected publications</p>
+</div>
+<div class="publication-list">
+<article class="publication" data-topics="biodiversity resilience"><span class="pub-year">2026</span><div>
+<p class="pub-journal">Communications Earth &amp; Environment</p>
+<h3><a href="https://doi.org/10.1038/s43247-026-03305-5">Functional composition and structural diversity enhance mangrove forest resilience in the Sundarbans <span aria-hidden="true">↗</span></a></h3>
+<p class="pub-authors">Rahman et al. · Biodiversity, structure &amp; resilience</p>
+</div></article>
+<article class="publication" data-topics="sensing"><span class="pub-year">2026</span><div>
+<p class="pub-journal">International Journal of Applied Earth Observation and Geoinformation</p>
+<h3><a href="https://doi.org/10.1016/j.jag.2026.105282">Differential impacts of soil hydrothermal properties on root and leaf phenology in cropland <span aria-hidden="true">↗</span></a></h3>
+<p class="pub-authors">Cao, Mohammad, Rahman &amp; Weng · Agricultural phenology</p>
+</div></article>
+<article class="publication" data-topics="biodiversity"><span class="pub-year">2024</span><div>
+<p class="pub-journal">Global Change Biology</p>
+<h3><a href="https://doi.org/10.1111/gcb.17152">Functional composition outweighs taxonomic and functional diversity in maintaining ecosystem properties and processes <span aria-hidden="true">↗</span></a></h3>
+<p class="pub-authors">Rahman et al. · Functional traits &amp; ecosystem processes</p>
+</div></article>
+<article class="publication" data-topics="biodiversity sensing"><span class="pub-year">2024</span><div>
+<p class="pub-journal">New Phytologist</p>
+<h3><a href="https://doi.org/10.1111/nph.19850">Unraveling the drivers and impacts of leaf phenological diversity in a subtropical forest: A fine-scale analysis using PlanetScope CubeSats <span aria-hidden="true">↗</span></a></h3>
+<p class="pub-authors">Wang et al. · Rahman, co-author · Phenological diversity</p>
+</div></article>
+<article class="publication" data-topics="biodiversity"><span class="pub-year">2021</span><div>
+<p class="pub-journal">Nature Communications</p>
+<h3><a href="https://doi.org/10.1038/s41467-021-24207-4">Co-benefits of protecting mangroves for biodiversity conservation and carbon storage <span aria-hidden="true">↗</span></a></h3>
+<p class="pub-authors">Rahman et al. · Biodiversity &amp; blue carbon</p>
+</div></article>
+<article class="publication" data-topics="sensing"><span class="pub-year">2020</span><div>
+<p class="pub-journal">Remote Sensing</p>
+<h3><a href="https://doi.org/10.3390/rs12091375">Remote sensing-based mapping of senescent leaf C:N ratio in the Sundarbans Reserved Forest using machine learning techniques <span aria-hidden="true">↗</span></a></h3>
+<p class="pub-authors">Rahman et al. · Trait mapping &amp; machine learning</p>
+</div></article>
+<article class="publication" data-topics="sensing"><span class="pub-year">2019</span><div>
+<p class="pub-journal">Remote Sensing in Ecology and Conservation</p>
+<h3><a href="https://doi.org/10.1002/rse2.105">Improved assessment of mangrove forests in Sundarbans East Wildlife Sanctuary using WorldView 2 and TanDEM-X high resolution imagery <span aria-hidden="true">↗</span></a></h3>
+<p class="pub-authors">Rahman et al. · Three-dimensional forest structure</p>
+</div></article>
+<article class="publication" data-topics="biodiversity sensing"><span class="pub-year">2018</span><div>
+<p class="pub-journal">Environmental Research Letters</p>
+<h3><a href="https://doi.org/10.1088/1748-9326/aabe1c">A global map of mangrove forest soil carbon at 30 m spatial resolution <span aria-hidden="true">↗</span></a></h3>
+<p class="pub-authors">Sanderman et al. · Rahman, co-author · Global carbon mapping</p>
+</div></article>
+</div>
+<div class="section-bottom">
+<p>The complete publication record is available on Google Scholar.</p>
+<a class="button button-outline" href="https://scholar.google.com/citations?user=0Ux4Z3YAAAAJ&amp;hl=en">View all publications <span aria-hidden="true">↗</span></a>
+</div></section>
+<section class="section section-tint" id="director"><div class="wrap director-grid">
+<div class="director-heading">
+<p class="eyebrow">Founder &amp; research lead</p>
+<h2>Dr. Md Mizanur Rahman</h2>
+<p class="director-role">Forest ecologist · Earth observation researcher</p>
+<p>Founder &amp; Director, GAINS<br>Research Fellow, Remote Sensing Laboratory<br>The Hong Kong Polytechnic University</p>
+<div class="director-links">
+<a class="button button-dark" href="./assets/CV_Rahman.pdf">Academic CV <span aria-hidden="true">↗</span></a><a class="text-link" href="https://orcid.org/0000-0003-4928-3729">ORCID <span aria-hidden="true">↗</span></a>
+</div>
+</div>
+<div class="director-details">
+<p class="large-copy">My research asks how biodiversity and forest structure sustain carbon storage, ecosystem function and resilience in a changing climate.</p>
+<p>I combine field ecology with remote sensing and spatial analysis, building on research experience across Kyoto University, NASA Goddard Space Flight Center, the University of Hong Kong, Jiangmen Laboratory of Carbon Science and Technology, and PolyU. My research direction extends this foundation toward tree physiology, IoT monitoring and GeoAI-informed ecological digital twins.</p>
+<div class="bio-columns">
+<div>
+<h3>Research &amp; training</h3>
+<p>PhD in Forest and Biomaterials Science, Kyoto University (2019). Experience in forest inventories, functional traits, carbon assessment, UAV and LiDAR observations, satellite analysis and ecological modelling.</p>
+</div>
+<div>
+<h3>Mentoring &amp; teaching</h3>
+<p>I support student research, analysis and manuscript development. Teaching interests include urban forestry, mangrove ecology, biodiversity–ecosystem functioning, remote sensing and GeoAI.</p>
+</div>
+</div>
+<dl class="metrics">
+<div>
+<dt>Peer-reviewed papers</dt>
+<dd>20+</dd>
+</div>
+<div>
+<dt>Citations</dt>
+<dd>1,550</dd>
+</div>
+<div>
+<dt>h-index</dt>
+<dd>14</dd>
+</div>
+</dl>
+<p class="small-note">Publication and citation snapshot: Google Scholar, September 2026.</p>
+</div>
+</div></section>
+<section class="section wrap" id="platforms"><div class="section-heading">
+<div>
+<p class="eyebrow">Connecting science and practice</p>
+<h2>Three complementary directions.</h2>
+</div>
+<p>Emerging platforms connect the GAINS research vision with community adaptation, sustainable systems and transparent environmental evidence.</p>
+</div>
+<div class="platform-grid">
+<a class="platform-card" href="./clear/"><span class="platform-label">Community &amp; adaptation <span aria-hidden="true">↗</span></span><h3>CLEAR</h3>
+<p>Community Lead Ecological Adaptation &amp; Resilience</p>
+<span class="platform-copy">Local knowledge, ecological restoration and climate-ready communities.</span></a>
+<a class="platform-card" href="./bless/"><span class="platform-label">Resources &amp; circularity <span aria-hidden="true">↗</span></span><h3>BLESS</h3>
+<p>Bioeconomy, Low-carbon Energy &amp; Sustainable Systems</p>
+<span class="platform-copy">Resource assessment, circular materials and responsible implementation.</span></a>
+<a class="platform-card" href="./trace/"><span class="platform-label">Evidence &amp; accountability <span aria-hidden="true">↗</span></span><h3>TRACE</h3>
+<p>Transparent Reporting, Accounting, Carbon &amp; Environmental Verification</p>
+<span class="platform-copy">Spatial monitoring, nature accounting and reproducible environmental reporting.</span></a>
+</div></section>
+<section class="contact-section" id="collaborate"><div class="wrap contact-grid">
+<div>
+<p class="eyebrow light">Start a conversation</p>
+<h2>Better questions.<br>Shared observations.<br><em>Stronger science.</em>
+</h2>
+</div>
+<div>
+<p>Interested in biodiversity, forest carbon, tree physiology, GeoAI or ecological monitoring? I welcome conversations about research, field observations, student mentoring and teaching.</p>
+<a class="button button-light" href="mailto:mizanfwt04@gmail.com">Get in touch <span aria-hidden="true">↗</span></a><a class="contact-email" href="mailto:mizanfwt04@gmail.com">mizanfwt04@gmail.com</a><p class="contact-location">Based in Hong Kong · Research across scales and regions</p>
+</div>
+</div></section></main>
+<footer class="site-footer"><div class="wrap footer-grid">
+<div>
+<a class="footer-brand" href="./">GAINS</a><p>Global Artificial Intelligence and Nature Solutions</p>
+</div>
+<nav aria-label="Footer navigation"><a href="https://scholar.google.com/citations?user=0Ux4Z3YAAAAJ&amp;hl=en">Google Scholar</a><a href="./assets/CV_Rahman.pdf">CV</a><a href="https://orcid.org/0000-0003-4928-3729">ORCID</a><a href="#main">Back to top ↑</a></nav>
+</div>
+<div class="wrap footer-meta">
+<span>© 2026 GAINS · Dr. Md Mizanur Rahman</span><span>Updated 25 October 2026</span>
+</div></footer>
+<dialog class="framework-dialog" aria-labelledby="framework-title"><div class="dialog-bar">
+<h2 id="framework-title">The GAINS research framework</h2>
+<button type="button" data-framework-close aria-label="Close diagram">Close ×</button>
+</div>
+<img src="./assets/gains-research-framework.webp" width="1536" height="1024" loading="lazy" alt="Full GAINS framework linking field plots, IoT and TreeTalker, drones, LiDAR, satellites and GEDI to biodiversity, carbon, GeoAI, JREDD+, resilience and ecological tipping points."><p>Research vision: sensor deployments and ecological digital twins are in development. <a href="./assets/gains-research-framework.webp">Open image</a></p></dialog>
+</body>
 </html>
