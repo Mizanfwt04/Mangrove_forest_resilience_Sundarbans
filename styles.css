@@ -97,6 +97,17 @@ em{font-weight:400}
 .framework-note{display:flex;justify-content:space-between;align-items:center;gap:60px;margin-top:27px}
 .framework-note p{font-size:12px;max-width:780px;margin:0}
 .framework-note .text-link{flex-shrink:0;font-size:11px}
+.purpose-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px;margin-top:48px;padding-top:36px;border-top:1px solid var(--line)}
+.purpose-grid .eyebrow{margin-bottom:10px}
+.purpose-grid h3{font-family:var(--serif);font-size:32px;margin-bottom:16px}
+.purpose-grid p:not(.eyebrow){font-size:14px;line-height:1.8;margin:0}
+.purpose-values{font-size:12px;margin:26px 0 18px;max-width:1000px}
+.goals-grid h3{max-width:none;font-size:19px}
+.goals-grid .theme-card p{margin-bottom:20px}
+.goals-grid--two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.challenge-list{padding-left:18px;margin:0 0 24px;font-size:13px;line-height:1.8}
+.challenge-list li+li{margin-top:10px}
+.project-grid .text-link{font-size:11px;line-height:1.6;margin-top:20px}
 .section-dark{background:var(--forest-deep);color:#bccfc3}
 .section-dark h2,.section-dark h3{color:var(--paper)}
 .project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px}
@@ -305,6 +316,7 @@ body.dialog-open{overflow:hidden}
 .intro-copy>p:not(.large-copy){font-size:13px}
 .research-lens span{font-size:9px;gap:8px}
 .theme-grid{grid-template-columns:1fr;gap:14px}
+.purpose-grid{grid-template-columns:1fr;gap:30px;margin-top:32px;padding-top:28px}
 .theme-card{padding:25px}
 .card-top{margin-bottom:20px}
 .theme-card h3{max-width:none;font-size:21px}
