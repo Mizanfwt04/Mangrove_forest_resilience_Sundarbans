@@ -137,6 +137,10 @@ em{font-weight:400}
 .metrics dt{font-size:10px;margin-top:9px}
 .small-note{font-size:9px!important;color:#64715c;margin:0}
 .platform-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.platform-grid--four{grid-template-columns:repeat(2,minmax(0,1fr))}
+.platform-leader{display:block;margin-top:16px;font-size:10px;font-weight:500;color:var(--ink)}
+.platform-director{margin:10px 0 0;font-size:11px;color:var(--paper)}
+.platform-director a{text-decoration:underline;text-underline-offset:4px}
 .platform-card{border:1px solid var(--line);border-radius:6px;display:block;padding:27px;transition:background .18s,border-color .18s}
 .platform-card:hover{background:var(--tint);border-color:#94a580}
 .platform-label{font-size:10px;display:flex;justify-content:space-between;gap:20px;color:#65784f}
@@ -332,6 +336,7 @@ body.dialog-open{overflow:hidden}
 .metrics dt{font-size:8px}
 .director-role{font-size:12px}
 .platform-grid{grid-template-columns:1fr;gap:15px}
+.platform-grid--four{grid-template-columns:1fr}
 .platform-card{padding:25px}
 .platform-label{font-size:10px}
 .platform-card h3{font-size:39px;margin-top:23px}
