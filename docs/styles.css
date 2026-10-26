@@ -102,8 +102,11 @@ em{font-weight:400}
 .purpose-grid h3{font-family:var(--serif);font-size:32px;margin-bottom:16px}
 .purpose-grid p:not(.eyebrow){font-size:14px;line-height:1.8;margin:0}
 .purpose-values{font-size:12px;margin:26px 0 18px;max-width:1000px}
+.purpose-links{display:flex;flex-wrap:wrap;gap:16px 30px}
 .goals-grid h3{max-width:none;font-size:19px}
 .goals-grid .theme-card p{margin-bottom:20px}
+.goals-grid .goal-platform-link{font-size:11px;line-height:1.7;padding-top:15px;border-top:1px solid var(--line)}
+.goal-platform-link a{display:block;color:var(--ink);text-decoration:underline;text-underline-offset:3px}
 .goals-grid--two{grid-template-columns:repeat(2,minmax(0,1fr))}
 .challenge-list{padding-left:18px;margin:0 0 24px;font-size:13px;line-height:1.8}
 .challenge-list li+li{margin-top:10px}
@@ -158,6 +161,26 @@ em{font-weight:400}
 .platform-card h3{font-family:var(--serif);font-size:40px;letter-spacing:-.04em;margin:28px 0 8px}
 .platform-card p{font-size:12px;color:var(--ink);line-height:1.65;min-height:60px;margin-bottom:20px}
 .platform-copy{display:block;border-top:1px solid var(--line);padding-top:18px;font-size:11px;line-height:1.8}
+.platform-network{margin:0}
+.network-hub{padding:28px 30px;text-align:center;background:var(--forest);border-radius:8px;color:var(--paper)}
+.network-hub .eyebrow{font-size:10px;margin-bottom:9px}
+.network-hub h3{font-family:var(--serif);font-size:36px;letter-spacing:-.035em;color:var(--paper)}
+.network-name{font-size:13px;margin:5px 0 20px}
+.network-foundation{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;font-size:11px;color:var(--lime)}
+.network-flow{position:relative;height:36px}
+.network-flow::before{content:"";position:absolute;left:50%;top:0;bottom:8px;border-left:1px solid #849875}
+.network-flow::after{content:"";position:absolute;left:calc(50% - 4px);bottom:8px;width:8px;height:8px;border-right:1px solid #849875;border-bottom:1px solid #849875;transform:rotate(45deg)}
+.network-platforms{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.network-platforms .platform-card{padding:22px}
+.network-platforms .platform-label{font-size:9px;gap:8px}
+.network-platforms .platform-card h3{font-size:34px;margin-top:22px}
+.network-platforms .platform-card p{min-height:78px}
+.network-outcomes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.network-outcomes>div{padding:23px 25px;background:var(--tint);border:1px solid var(--line);border-radius:6px}
+.network-outcomes .eyebrow{font-size:9px;margin-bottom:9px}
+.network-outcomes h3{font-family:var(--serif);font-size:27px}
+.network-outcomes p:last-child{font-size:12px;line-height:1.7;margin:9px 0 0}
+.platform-network figcaption{font-size:11px;text-align:center;line-height:1.8;margin:20px auto 0;max-width:850px}
 .contact-section{background:var(--forest);padding-block:78px;color:#ccdacd}
 .contact-grid{display:grid;grid-template-columns:1.2fr 1fr;align-items:center;gap:100px}
 .contact-section h2{color:var(--paper);font-size:clamp(38px,4vw,53px)}
@@ -219,6 +242,8 @@ body.dialog-open{overflow:hidden}
 .workflow article+article{padding-left:18px}
 .workflow h3{font-size:23px}
 .site-nav{gap:21px}
+.network-platforms{grid-template-columns:repeat(2,minmax(0,1fr))}
+.network-platforms .platform-card p{min-height:60px}
 .hero-figure figcaption{gap:4px}
 .research-lens{gap:15px}
 .research-lens span{font-size:10px}
@@ -309,7 +334,7 @@ body.dialog-open{overflow:hidden}
 .landscape-strip p{font-size:10px}
 .landscape-strip i{margin-inline:4px}
 .landscape-strip span{font-size:8px}
-.site-nav{gap:7px;font-size:10px}
+.site-nav{gap:7px;font-size:10px;flex-wrap:wrap}
 .site-nav .nav-contact{padding:8px}
 .nav-contact span{display:none}
 .large-copy{font-size:18px}
@@ -349,6 +374,13 @@ body.dialog-open{overflow:hidden}
 .director-role{font-size:12px}
 .platform-grid{grid-template-columns:1fr;gap:15px}
 .platform-grid--four{grid-template-columns:1fr}
+.network-platforms,.network-outcomes{grid-template-columns:1fr}
+.network-hub{padding:25px 20px}
+.network-foundation{gap:9px 16px;font-size:10px}
+.network-platforms .platform-card{padding:25px}
+.network-platforms .platform-label{font-size:10px}
+.network-platforms .platform-card p{min-height:0}
+.network-platforms .platform-copy{font-size:12px}
 .platform-card{padding:25px}
 .platform-label{font-size:10px}
 .platform-card h3{font-size:39px;margin-top:23px}
