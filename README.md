@@ -2,6 +2,15 @@
 
 This repository contains the code for analyzing mangrove forest resilience in the Sundarbans region using satellite remote sensing data (MODIS).
 
+## Related: Chakaria remanent mangrove productivity (uGPP)
+
+Python + geemap + Google Earth Engine workflow comparing remanent / planted mangrove in shrimp ponds (RMSP, PMSP) vs protected mangrove (PMWSP):
+
+- Package: [`chakaria_mangrove_productivity/`](chakaria_mangrove_productivity/)
+- Notebook: [`chakaria_ugpp_analysis.ipynb`](chakaria_ugpp_analysis.ipynb)
+- Metrics: Mean uGPP, temporal stability (μ/σ), Sen slope, Mann–Kendall Tau
+- Quick start (offline demo): `cd chakaria_mangrove_productivity && pip install -r requirements.txt && python run_pipeline.py`
+
 ## Overview
 
 This project analyzes the resilience of mangrove forests in the Sundarbans to cyclone disturbances using kernel Normalized Difference Vegetation Index (kNDVI) time series data from 2000-2024. The analysis includes perturbation detection, recovery dynamics, and spatial mapping of disturbance indices.
